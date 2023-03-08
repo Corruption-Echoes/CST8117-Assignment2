@@ -1,6 +1,30 @@
 .bubble{
     z-index: 1;
     position: absolute;
-    left: 50;
-    bottom: 0;
+    bottom: 0px;
+    border-radius: 100px;
+}
+#BubbleContainer{
+    position: relative;
+    height:98vh;
+    width:80vw;
+    vertical-align: bottom;
+}
+.leftMarker{
+    padding:0;
+    background-color: black;
+    width:1px;
+    height:98vh;
+}
+.rightMarker{
+    padding:0;
+    background-color: black;
+    width:1px;
+    height:98vh;
+}
+.bottleStructure{
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction: row;
 }
