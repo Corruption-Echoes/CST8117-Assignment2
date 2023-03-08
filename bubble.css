@@ -1,0 +1,12 @@
+.bubble{
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 100px;
+}
+#BubbleContainer{
+    position: relative;
+    height:98vh;
+    width:80vw;
+    vertical-align: bottom;
+}

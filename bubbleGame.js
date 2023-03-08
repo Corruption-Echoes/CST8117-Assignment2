@@ -1,8 +1,7 @@
 // Gets the neccesary field variables
 const bubbleContainer = document.getElementById('BubbleContainer')
-const leftMargin = document.getElementsByClassName('leftMarker')[0].getBoundingClientRect().right
-const playWidth = document.getElementsByClassName('rightMarker')[0].getBoundingClientRect().left - leftMargin
-const playHeight = bubbleContainer.getBoundingClientRect().bottom - bubbleContainer.getBoundingClientRect().top
+const playWidth = bubbleContainer.getBoundingClientRect().width
+const playHeight = bubbleContainer.getBoundingClientRect().height
 // Controls bubble position offset(for centering)
 const bubbleWidth = 20
 const bubbleHeight = 20
@@ -80,7 +79,7 @@ function bubbleSpawnCheck (bubbles) {
     }
   }
 }
-// Core update system
+// Core update loop
 function animate () {
   const bubbles = document.getElementsByClassName('bubble')
   if (bubbles.length > 0) {
@@ -88,5 +87,5 @@ function animate () {
   }
   bubbleSpawnCheck(bubbles)
 }
-
+// starts the loop
 setInterval(animate, animationSpeed)
