@@ -1,17 +1,14 @@
-.pointGiver{
+.bubble{
     z-index: 1;
     position: absolute;
     bottom: 0px;
     border-radius: 250px;
     font-size: xx-large;
+}
+.pointGiver{
     color: lightgray;
 }
 .streakBreaker{
-    z-index: 1;
-    position: absolute;
-    bottom: 0px;
-    border-radius: 250px;
-    font-size: xx-large;
     color: red;
     background-color: salmon;
 }
