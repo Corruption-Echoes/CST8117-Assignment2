@@ -1,12 +1,29 @@
-.bubble{
+.pointGiver{
     z-index: 1;
     position: absolute;
     bottom: 0px;
-    border-radius: 100px;
+    border-radius: 250px;
+    font-size: xx-large;
+    color: lightgray;
+}
+.streakBreaker{
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 250px;
+    font-size: xx-large;
+    color: red;
+    background-color: salmon;
 }
 #BubbleContainer{
     position: relative;
     height:98vh;
     width:80vw;
     vertical-align: bottom;
+    background-color: blue;
+}
+#score{
+    color: red;
+    font-size: xx-large;
+    z-index: 2;
 }
