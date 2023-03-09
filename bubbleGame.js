@@ -115,7 +115,7 @@ function bubbleSpawnCheck (bubbles) {
   }
 }
 // Core update loop
-function animate () {
+function update () {
   const bubbles = document.getElementsByClassName('bubble')
   if (bubbles.length > 0) {
     Array.prototype.forEach.call(bubbles, bubbleWander)
@@ -125,4 +125,4 @@ function animate () {
 // Initialize the boards and start the loop
 document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
 document.getElementById('streakboard').textContent = streakBoardTemplate + '0'
-setInterval(animate, animationSpeed)
+setInterval(update, animationSpeed)
