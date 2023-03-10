@@ -1,6 +1,7 @@
 const highscoreContainer = document.getElementById('highscoreContainer')
 const personalContainer = document.getElementById('personalConstainer')
 let ranking = 0
+const login = { username: '500' }
 
 function retrieveHighscores () {
   const leaderboardData = APIGOESHERE()
