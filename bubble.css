@@ -30,21 +30,16 @@ body{
     color: white;
 }
 
-.mainMenu
-{
+.mainMenu{
     display: grid;
     grid-template-columns: auto auto auto auto ;
     justify-content: space-evenly;
     height: 60px;
     padding: 10px, 10px, 10px, 10px;
-
-    background-color: rgb(71, 39, 71);
-    color: white;
+    background-color: #90C5C9;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: none;
-
     font-size: 35px;
     text-align:center;
     align-content: center;
-    
 }
