@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+
 .bubble{
     z-index: 1;
     position: absolute;
@@ -40,7 +44,7 @@ body{
 
     background-color: rgb(71, 39, 71);
     color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Indie Flower', cursive;
     text-decoration: none;
 
     font-size: 35px;
