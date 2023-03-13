@@ -6,15 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
     <link rel="stylesheet" href="bubble.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="mainMenu">
-        <div><a href="main.html">Home</a> </div>
-        <div> <a href="registration.html">REGISTER</a> </div>
-        <div><a href="game.html">START</a> </div>
-    </div>
-
-    <img src="Images/reg&log.png" alt="main">
-    
+    <header class="mainMenu">
+        <a href="main.html">Home</a>
+        <a href="registration.html">Register</a>
+        <a href="game.html">Start</a>
+    </header>
+    <main>
+        <img src="Images/reg&log.png" alt="main">
+        <form>
+            <div class="form-line">
+                <label>User Name:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-line">
+                <label>Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="forgot-password">
+                <a href="mailto:">Forgot Password?</a>
+            </div>
+            <input type="button" value="Log in" class="login-btn">
+        </form>
+    </main>
 </body>
 </html>
