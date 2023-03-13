@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
+/* GamePage */
 
 .bubble{
     z-index: 1;
@@ -30,9 +31,18 @@
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color: white;
+    font-family: 'Indie Flower', cursive;
 }
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: #90C5C9;
+    font-weight: bold;
+}
+
+/* Main All */
 
 .mainMenu{
     display: grid;
@@ -41,9 +51,16 @@ body{
     height: 60px;
     padding: 10px, 10px, 10px, 10px;
     font-family: 'Indie Flower', cursive;
-    background-color: #90C5C9;
-    text-decoration: none;
+    background-color: rgb(238, 115, 135);
+    
     font-size: 35px;
     text-align:center;
     align-content: center;
 }
+
+.mainMenuItem a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
