@@ -1,7 +1,7 @@
 const highscoreContainer = document.getElementById('highscoreContainer')
 const personalContainer = document.getElementById('personalConstainer')
 let ranking = 0
-const login = { username: '500' }
+const login = { username: 'waffle' }
 
 function retrieveHighscores () {
   const leaderboardData = APIGOESHERE()
@@ -9,7 +9,7 @@ function retrieveHighscores () {
   for (const score of leaderboardData) {
     ranking++
     table.appendChild(printToBoard(score, ranking))
-    if (score.name == login.name) {
+    if (score.name === login.name) {
       personalContainer.textContent = ' #' + ranking + ' ' + score.score
     }
   }

@@ -31,22 +31,19 @@ const scorePer = 100
 const streakMultiplier = 1.1
 
 // Creates bubble objects and places them in the container
-function createBubble () {
+function createBubble (mode) {
   const construct = document.createElement('Button')
-  construct.className = 'pointGiver bubble'
+
   construct.textContent = 'O'
   construct.style.left = pickSpawner() + 'px'
   construct.style.bottom = '0px'
-  construct.onclick = addPoints
-  bubbleContainer.appendChild(construct)
-}
-function createStreakBreaker () {
-  const construct = document.createElement('Button')
-  construct.className = 'streakBreaker bubble'
-  construct.textContent = 'X'
-  construct.style.left = pickSpawner() + 'px'
-  construct.style.bottom = '0px'
-  construct.onclick = removeStreak
+  if (mode === 'normal') {
+    construct.onclick = addPoints
+    construct.className = 'pointGiver bubble'
+  } else if (mode === 'break') {
+    construct.className = 'streakBreaker bubble'
+    construct.onclick = removeStreak
+  }
   bubbleContainer.appendChild(construct)
 }
 function addPoints () {
@@ -104,9 +101,9 @@ function bubbleSpawnCheck (bubbles) {
     if (Math.random() * dynamicFlowRate > 1 - bubbleSpawnPercentage) {
       const type = Math.random()
       if (type > bubbleWeight) {
-        createBubble()
+        createBubble('normal')
       } else {
-        createStreakBreaker()
+        createBubble('break')
       }
       dynamicFlowRate = bubbleFlowRate
     } else if (bubbleFlowPrejudiceRate > 1) {
