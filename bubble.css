@@ -16,6 +16,10 @@
     color: red;
     background-color: salmon;
 }
+.golden{
+    color:gold;
+    background-color: khaki;
+}
 #BubbleContainer{
     position: relative;
     height:98vh;

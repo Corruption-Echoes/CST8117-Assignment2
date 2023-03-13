@@ -20,8 +20,9 @@ const bubbleFlowRate = 1// Multiplier for bubble spawns
 let dynamicFlowRate = bubbleFlowRate
 const bubbleFlowPrejudiceRate = 1.005 // Multiplier applied to dynamicRate when spawn fails(except at max pop)
 const bubbleSpawnPercentage = 0.0225// Must be a float
-const bubbleWeight = 0.5
-const breakWeight = 0.5
+const bubbleWeight = 0.7
+const breakWeight = 0.2
+const goldWeight = 0.1
 // Controls the scoring system
 const scoreBoardTemplate = document.getElementById('scoreboard').textContent
 const streakBoardTemplate = document.getElementById('streakboard').textContent
@@ -29,6 +30,7 @@ let score = 0
 let streak = 0
 const scorePer = 100
 const streakMultiplier = 1.1
+const goldMultiplier = 10
 
 // Creates bubble objects and places them in the container
 function createBubble (mode) {
@@ -43,8 +45,18 @@ function createBubble (mode) {
   } else if (mode === 'break') {
     construct.className = 'streakBreaker bubble'
     construct.onclick = removeStreak
+  } else if (mode === 'gold') {
+    construct.className = 'golden bubble'
+    construct.onclick = addGoldPoints
   }
   bubbleContainer.appendChild(construct)
+}
+function addGoldPoints () {
+  streak++
+  score += scorePer * goldMultiplier * (streak * streakMultiplier)
+  document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
+  document.getElementById('streakboard').textContent = streakBoardTemplate + streak
+  this.remove()
 }
 function addPoints () {
   streak++
@@ -100,10 +112,12 @@ function bubbleSpawnCheck (bubbles) {
   if (bubbles.length < maximumBubbles) {
     if (Math.random() * dynamicFlowRate > 1 - bubbleSpawnPercentage) {
       const type = Math.random()
-      if (type > bubbleWeight) {
+      if (type < bubbleWeight) {
         createBubble('normal')
-      } else {
+      } else if (type < bubbleWeight + breakWeight) {
         createBubble('break')
+      } else {
+        createBubble('gold')
       }
       dynamicFlowRate = bubbleFlowRate
     } else if (bubbleFlowPrejudiceRate > 1) {
