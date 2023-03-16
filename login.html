@@ -6,21 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
     <link rel="stylesheet" href="bubble.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <h1>
-       Bubble Popper
+        Bubble Popper
     </h1>
-    <div class="mainMenu">
+    <header class="mainMenu">
         <div class="mainMenuItem"><a href="login.html"> Log In</a> </div>
         <div class="mainMenuItem"><a href="registration.html"> Register</a> </div>
         <div class="mainMenuItem"><a href="game.html"> Start</a> </div>
-    </div>
+    </header>
 
-    <img class=bubblePop src="Images/reg&log.png" alt="main">
+    <main>
+        <img src="Images/reg&log.png" alt="main">
+        <form>
+            <div class="form-line">
+                <label>User Name:</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-line">
+                <label>Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="forgot-password">
+                <a href="mailto:">Forgot Password?</a>
+            </div>
+            <input type="button" value="Log in" class="login-btn">
+        </form>
+    </main>
     
-    <div class="mainMenu">
-
-    </div>
 </body>
 </html>
