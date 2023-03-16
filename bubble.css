@@ -15,11 +15,11 @@
 }
 .streakBreaker{
     color: red;
-    background-color: salmon;
+    /* background-color: salmon; */
 }
 .golden{
     color:gold;
-    background-color: khaki;
+    /*background-color: khaki;*/
 }
 #BubbleContainer{
     position: relative;

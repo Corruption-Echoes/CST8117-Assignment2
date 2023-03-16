@@ -34,19 +34,22 @@ const goldMultiplier = 10
 
 // Creates bubble objects and places them in the container
 function createBubble (mode) {
-  const construct = document.createElement('Button')
-
-  construct.textContent = 'O'
+  const construct = document.createElement('a')
+  const image = document.createElement('img')
+  construct.appendChild(image)
   construct.style.left = pickSpawner() + 'px'
   construct.style.bottom = '0px'
+  image.style.width = bubbleWidth * 3 + 'px'
+  image.style.height = bubbleHeight * 3 + 'px'
+  construct.className = 'bubble'
   if (mode === 'normal') {
     construct.onclick = addPoints
-    construct.className = 'pointGiver bubble'
+    image.src = 'images/Bubble.png'
   } else if (mode === 'break') {
-    construct.className = 'streakBreaker bubble'
+    image.src = 'images/redBubble.png'
     construct.onclick = removeStreak
   } else if (mode === 'gold') {
-    construct.className = 'golden bubble'
+    image.src = 'images/goldBubble.png'
     construct.onclick = addGoldPoints
   }
   bubbleContainer.appendChild(construct)
