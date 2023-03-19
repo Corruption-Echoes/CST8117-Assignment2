@@ -37,6 +37,8 @@
 body{
     background-color: white;
     font-family: 'Indie Flower', cursive;
+    background-color: #F8F8F8;
+    background-image: url("./Images/mainPage.webp")
 }
 
 h1{
