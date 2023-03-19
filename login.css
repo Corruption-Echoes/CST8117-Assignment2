@@ -63,5 +63,8 @@ form {
   border: 1px solid;
   border-radius: 7.5px;
   font-size: 25px;
+  font-family: 'Indie Flower', cursive;
+  font-size: larger;
+  font-weight: bold;
   text-align: center;
 }
