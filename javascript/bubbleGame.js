@@ -6,24 +6,24 @@ const playHeight = bubbleContainer.getBoundingClientRect().height
 // Controls bubble position offset(for centering)
 const bubbleWidth = 20
 const bubbleHeight = 20
-const bubbleScale = 3
+const bubbleScale = 5
 const halfWidth = bubbleWidth / 2
 // Controls bubble upward/horizontal speed. Bigger numbers=Bigger jumps
-const bubbleSpeed = 3
-const bubbleHorizontalSpeed = 5
+const bubbleSpeed = 2
+const bubbleHorizontalSpeed = 3
 const bubbleHorizontalPercent = 0.25// Percentage a bubble should move left or right
 const overflowModeWrap = true
 // Controls the fps (animation smoothness) bubble speed SCALES exponentially with this
-const desiredFPS = 120
+const desiredFPS = 500
 const animationSpeed = 1000 / desiredFPS
 // Controls automated bubble spawning
-const maximumBubbles = 100
+const maximumBubbles = 1500
 const bubbleFlowRate = 1// Multiplier for bubble spawns
 let dynamicFlowRate = bubbleFlowRate
-const bubbleFlowPrejudiceRate = 1.005 // Multiplier applied to dynamicRate when spawn fails(except at max pop)
+const bubbleFlowPrejudiceRate = 1.015 // Multiplier applied to dynamicRate when spawn fails(except at max pop)
 const bubbleSpawnPercentage = 0.0225// Must be a float
-const bubbleWeight = 0.7
-const breakWeight = 0.2
+const bubbleWeight = 0.4
+const breakWeight = 0.5
 const goldWeight = 0.1
 // Controls the scoring system
 const scoreBoardTemplate = document.getElementById('scoreboard').textContent
