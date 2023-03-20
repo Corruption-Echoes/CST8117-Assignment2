@@ -47,6 +47,11 @@ h1{
     font-weight: bold;
 }
 
+img{
+    width: 120%;
+}
+
+
 /* Main All */
 
 .mainMenu{
@@ -69,3 +74,42 @@ h1{
     text-decoration: none;
 }
 
+/*Customize your tea*/
+
+.custOuter{
+    display: flex;
+}
+
+.custLeft{
+    border: 1px solid;
+    width: 40%;
+    height: 600px;
+
+}
+
+.custRight{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid;
+    width: 60%;
+    height: 600px;
+
+
+}
+
+.flavour{
+    border: 1px solid;
+    width: 30%;
+    height: 300px;
+
+}
+
+.flavour{
+    border: 1px solid;
+    width: 30%;
+    height: 300px;
+
+}
