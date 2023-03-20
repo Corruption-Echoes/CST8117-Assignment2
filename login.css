@@ -54,12 +54,6 @@ form {
   color: inherit;
 }
 
-a {
-  width: 100%;
-  grid-column: 2 / 3;
-  justify-items: center;
-}
-
 .login-btn {
   width: 70%;
   margin-top: 50px;
