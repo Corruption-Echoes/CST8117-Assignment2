@@ -1,10 +1,12 @@
 // Gets the neccesary field variables
 const bubbleContainer = document.getElementById('BubbleContainer')
+const Decorative = bubbleContainer.classList.contains('decorative')
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
 // Controls bubble position offset(for centering)
 const bubbleWidth = 20
 const bubbleHeight = 20
+const bubbleScale = 3
 const halfWidth = bubbleWidth / 2
 // Controls bubble upward/horizontal speed. Bigger numbers=Bigger jumps
 const bubbleSpeed = 3
@@ -39,8 +41,8 @@ function createBubble (mode) {
   construct.appendChild(image)
   construct.style.left = pickSpawner() + 'px'
   construct.style.bottom = '0px'
-  image.style.width = bubbleWidth * 3 + 'px'
-  image.style.height = bubbleHeight * 3 + 'px'
+  image.style.width = bubbleWidth * bubbleScale + 'px'
+  image.style.height = bubbleHeight * bubbleScale + 'px'
   construct.className = 'bubble'
   if (mode === 'normal') {
     construct.onclick = addPoints
