@@ -54,7 +54,7 @@
     }
     //Run the query!
     //echo $SQL;
-    $result=$mysqli->query($sql);
+    $result=$mysqli->query($SQL);
     //Screw it give the Javascript side a puzzle to solve in how it interprets this mess!
     echo $result;
 ?>
