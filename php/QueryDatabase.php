@@ -46,9 +46,11 @@
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users";
             //echo "statement was G";
+            echo "<table class='HST'>";
             break;
         case "U":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%"+$unpackedPacket[0]+"%'";
+            echo "<table class='HST'>";
             break;
         case "H":
             $SQL="INSERT INTO scores (user_id,score,play_date) VALUES ((SELECT idk_users FROM users WHERE username='"+$unpackedPacket[0]+"'),'"+$unpackedPacket[1]+"','"+date("Y/m/d h:i:s")+"')";
@@ -60,7 +62,14 @@
     //Screw it give the Javascript side a puzzle to solve in how it interprets this mess!
     if($result->num_rows>0){
         while($row=$result->fetch_assoc()){
-            echo ":r:",$row;
+            if($requestType=="G" ||$requestType=='U'){
+                echo "<tr><td class='HS'>",$row["username"],"</td><td class='HS'>",$row["score"],"</td><td class='HS'>",$row["play_date"],"</td></tr>";
+            }else{
+                echo "True";
+            }
+        }
+        if($requestType=="G"){
+            echo "</table>";
         }
     }
 ?>
