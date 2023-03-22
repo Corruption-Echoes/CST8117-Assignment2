@@ -1,6 +1,6 @@
 <?php
     //Connect to the server
-    $mysqli = new mysqli("localhost", "localDB", "h9bWX9i1UBCY2JPR", "bubbles");
+    $mysqli = new mysqli("localhost", "localDB", "3RaWzFLG4a2WzJEn", "bubbles");
     if($mysqli->connect_error) {
         echo('Could not connect');
     }
