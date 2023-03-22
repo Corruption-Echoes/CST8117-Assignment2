@@ -6,7 +6,7 @@ let ranking = 0
 
 function printHighscores (leaderboardData) {
   console.log('Data Received:' + leaderboardData)
-  highscoreContainer.appendChild(leaderboardData)
+  highscoreContainer.innerHTML=leaderboardData
 }
 function printToBoard (score, ranking) {
   const row = document.createElement('tr')
