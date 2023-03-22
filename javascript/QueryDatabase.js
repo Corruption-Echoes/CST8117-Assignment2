@@ -9,7 +9,7 @@ function registerHighscore(userName,score,returnFunction){
     sendQuery('H' , userName+':'+score , returnFunction)
 }
 function getHighscores(returnFunction){
-    sendQuery('G' , '' , returnFunction)
+    sendQuery('G' , 'G' , returnFunction)
 }
 function getHighscore(userName , returnFunction){
     sendQuery('U' , userName , returnFunction)
