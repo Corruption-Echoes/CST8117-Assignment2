@@ -11,6 +11,7 @@
     $G = $_REQUEST["G"];
     $U = $_REQUEST["U"];
     $requestType='';
+    echo $requestType;
     $dataPacket='';
     $SQL='';
     //Figure out which request it is and grab the data packet
