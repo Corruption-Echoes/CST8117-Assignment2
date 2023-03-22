@@ -1,8 +1,8 @@
 
-function login (userName, password, returnFunction) {
+function attemptLogin (userName, password, returnFunction) {
   sendQuery('L', userName + ':' + password, returnFunction)
 }
-function register (userName, password, email, phone, returnFunction) {
+function attemptRegister (userName, password, email, phone, returnFunction) {
   sendQuery('R', userName + ':' + password + ':' + email + ':' + phone, returnFunction)
 }
 function registerHighscore (userName, score, returnFunction) {
