@@ -58,5 +58,9 @@
     //echo $SQL;
     $result=$mysqli->query($SQL);
     //Screw it give the Javascript side a puzzle to solve in how it interprets this mess!
-    echo $result;
+    if($result->num_rows>0){
+        while($row=$result->fetch_assoc()){
+            echo ":r:",$row;
+        }
+    }
 ?>
