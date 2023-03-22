@@ -4,8 +4,8 @@ const Decorative = bubbleContainer.classList.contains('decorative')
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
 // Controls bubble position offset(for centering)
-const bubbleWidth = 50
-const bubbleHeight = 50
+const bubbleWidth = 20
+const bubbleHeight = 20
 const bubbleScale = 3
 const halfWidth = bubbleWidth / 2
 // Controls bubble upward/horizontal speed. Bigger numbers=Bigger jumps
