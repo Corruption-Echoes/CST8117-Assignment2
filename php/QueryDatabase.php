@@ -75,5 +75,7 @@
         if($requestType=="G"||$requestType=='U'){
             echo "</table>";
         }
+    }else{
+        return "False";
     }
 ?>
