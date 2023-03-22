@@ -4,9 +4,9 @@ const Decorative = bubbleContainer.classList.contains('decorative')
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
 // Controls bubble position offset(for centering)
-const bubbleWidth = 20
-const bubbleHeight = 20
-const bubbleScale = 5
+const bubbleWidth = 50
+const bubbleHeight = 50
+const bubbleScale = 3
 const halfWidth = bubbleWidth / 2
 // Controls bubble upward/horizontal speed. Bigger numbers=Bigger jumps
 const bubbleSpeed = 2
@@ -22,8 +22,8 @@ const bubbleFlowRate = 1// Multiplier for bubble spawns
 let dynamicFlowRate = bubbleFlowRate
 const bubbleFlowPrejudiceRate = 1.015 // Multiplier applied to dynamicRate when spawn fails(except at max pop)
 const bubbleSpawnPercentage = 0.0225// Must be a float
-const bubbleWeight = 0.4
-const breakWeight = 0.5
+const bubbleWeight = 0.6
+const breakWeight = 0.3
 const goldWeight = 0.1
 // Controls the scoring system
 const scoreBoardTemplate = document.getElementById('scoreboard').textContent
