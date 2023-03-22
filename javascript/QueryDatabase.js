@@ -15,8 +15,9 @@ function getHighscore(userName , returnFunction){
     sendQuery('U' , userName , returnFunction)
 }
 function sendQuery(mode, dataPacket,returnFunction){
+    console.log('Sending Query')
     const xhttpRequest=new XMLHttpRequest()
-    xhttpRequest.onload=returnFunction
-    xhttpRequest.open("GET","QueryDatabase.php?"+mode+"="+dataPacket+";")
+    xhttpRequest.onload=function(){returnFunction(this.responseText)}
+    xhttpRequest.open("GET","php/QueryDatabase.php?"+mode+"="+dataPacket+";")
     xhttpRequest.send()
 }

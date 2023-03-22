@@ -1,10 +1,11 @@
+
 const highscoreContainer = document.getElementById('highscoreContainer')
 const personalContainer = document.getElementById('personalConstainer')
 let ranking = 0
-const login = { username: 'waffle' }
+//const login = { username: 'waffle' }
 
-function retrieveHighscores () {
-  const leaderboardData = APIGOESHERE()
+function printHighscores (leaderboardData) {
+  console.log('Data Received:',leaderboardData)
   const table = document.createElement('table')
   for (const score of leaderboardData) {
     ranking++
@@ -35,5 +36,8 @@ function APIGOESHERE () {
   const x = [{ name: 'x', score: '500', time: '2023/02/25' }, { name: 'x', score: '500', time: '2023/02/25' }, { name: 'x', score: '500', time: '2023/02/25' }]
   return x
 }
+function loadHighscores(){
+  getHighscores(printHighscores)
+}
 
-retrieveHighscores()
+loadHighscores()
