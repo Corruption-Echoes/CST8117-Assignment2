@@ -96,7 +96,7 @@ function bubbleAnimate (bubble) {
     const x = bubble.firstChild.src
      console.log(x)
     if (Math.random() > 0.7) {
-      if (x.includes('ubble')) {
+      if (x.includes('ubble.')) {
         bubble.firstChild.src = 'images/pop1.png'
       } else if (x.includes('p1')) {
         bubble.firstChild.src = 'images/pop2.png'
