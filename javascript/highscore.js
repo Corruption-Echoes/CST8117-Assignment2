@@ -2,7 +2,7 @@
 const highscoreContainer = document.getElementById('highscoreContainer')
 const personalContainer = document.getElementById('personalConstainer')
 
-const userName = localStorage.getItem('userID')
+const userID = localStorage.getItem('userID')
 
 function printHighscores (leaderboardData) {
   // console.log('Data Received:' + leaderboardData)
