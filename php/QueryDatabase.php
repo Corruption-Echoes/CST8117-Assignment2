@@ -1,7 +1,7 @@
 <?php
     //Connect to the server
-    $mysqli = new mysqli("localhost", "localDB", "3RaWzFLG4a2WzJEn", "bubbles");
-    if($mysqli->connect_error) {
+    $mysqli = mysqli_connect("localhost", "localDB", "3RaWzFLG4a2WzJEn", "bubbles");
+    if(!$mysqli) {
         echo('A critical error occured: Could not connect to MariaDB');
     }
     //Load the request data into memory
@@ -45,7 +45,7 @@
             break;
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users";
-            echo "statement was G";
+            //echo "statement was G";
             break;
         case "U":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%"+$unpackedPacket[0]+"%'";
@@ -55,7 +55,7 @@
             break;
     }
     //Run the query!
-    echo $SQL;
+    //echo $SQL;
     $result=$mysqli->query($SQL);
     //Screw it give the Javascript side a puzzle to solve in how it interprets this mess!
     echo $result;
