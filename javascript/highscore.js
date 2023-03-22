@@ -6,15 +6,7 @@ let ranking = 0
 
 function printHighscores (leaderboardData) {
   console.log('Data Received:' + leaderboardData)
-  const table = document.createElement('table')
-  for (const score of leaderboardData) {
-    ranking++
-    table.appendChild(printToBoard(score, ranking))
-    if (score.name === login.name) {
-      personalContainer.textContent = ' #' + ranking + ' ' + score.score
-    }
-  }
-  highscoreContainer.appendChild(table)
+  highscoreContainer.appendChild(leaderboardData)
 }
 function printToBoard (score, ranking) {
   const row = document.createElement('tr')
