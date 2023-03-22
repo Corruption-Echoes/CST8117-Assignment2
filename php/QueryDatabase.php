@@ -2,7 +2,7 @@
     //Connect to the server
     $mysqli = new mysqli("localhost", "localDB", "3RaWzFLG4a2WzJEn", "bubbles");
     if($mysqli->connect_error) {
-        echo('Could not connect');
+        echo('A critical error occured: Could not connect to MariaDB');
     }
     //Load the request data into memory
     $L = $_REQUEST["L"];
@@ -30,9 +30,9 @@
         $requestType='U';
         $dataPacket=$U;
     }
-    echo $requestType;
+    //echo $requestType;
     //Unpack the dataPacket into an array
-    echo $dataPacket;
+    //echo $dataPacket;
     $unpackedPacket=explode(':', $dataPacket);
     $SQL='';
     //Handle the SQL creation
@@ -54,7 +54,7 @@
             break;
     }
     //Run the query!
-    echo $SQL;
+    //echo $SQL;
     $result=$mysqli->query($SQL);
     //Screw it give the Javascript side a puzzle to solve in how it interprets this mess!
     echo $result;
