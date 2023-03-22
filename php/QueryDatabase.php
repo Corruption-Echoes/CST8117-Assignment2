@@ -15,19 +15,19 @@
     $SQL='';
     //Figure out which request it is and grab the data packet
     if($L!==null){
-        $requestType='L';
+        $requestType="L";
         $dataPacket=$L;
     }else if($R!==null){
-        $requestType='R';
+        $requestType="R";
         $dataPacket=$R;
     }else if($H!==null){
-        $requestType='H';
+        $requestType="H";
         $dataPacket=$H;
     }else if($G!==null){
-        $requestType='G';
+        $requestType="G";
         $dataPacket=$G;
     }else if($U!==null){
-        $requestType='U';
+        $requestType="U";
         $dataPacket=$U;
     }
     //echo $requestType;
