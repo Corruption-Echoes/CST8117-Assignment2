@@ -31,6 +31,7 @@
         $dataPacket=$U;
     }
     //Unpack the dataPacket into an array
+    echo $dataPacket;
     $unpackedPacket=explode(':', $dataPacket);
     //Handle the SQL creation
     switch($requestType){

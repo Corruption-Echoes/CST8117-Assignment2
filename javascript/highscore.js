@@ -5,7 +5,7 @@ let ranking = 0
 //const login = { username: 'waffle' }
 
 function printHighscores (leaderboardData) {
-  console.log('Data Received:',leaderboardData)
+  console.log('Data Received:' + leaderboardData)
   const table = document.createElement('table')
   for (const score of leaderboardData) {
     ranking++
