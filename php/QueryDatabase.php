@@ -2,7 +2,7 @@
     //Connect to the server
     $mysqli = new mysqli("localhost", "localDB", "h9bWX9i1UBCY2JPR", "bubbles");
     if($mysqli->connect_error) {
-        exit('Could not connect');
+        echo('Could not connect');
     }
     //Load the request data into memory
     $L = $_REQUEST["L"];
