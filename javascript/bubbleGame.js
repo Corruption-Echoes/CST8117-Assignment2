@@ -9,7 +9,7 @@ const bubbleHeight = 20
 const bubbleScale = 5
 const halfWidth = bubbleWidth / 2
 // Controls bubble upward/horizontal speed. Bigger numbers=Bigger jumps
-const bubbleSpeed = 2
+const bubbleSpeed = 1.01
 const bubbleHorizontalSpeed = 3
 const bubbleHorizontalPercent = 0.25// Percentage a bubble should move left or right
 const overflowModeWrap = true
@@ -17,7 +17,7 @@ const overflowModeWrap = true
 const desiredFPS = 500
 const animationSpeed = 1000 / desiredFPS
 // Controls automated bubble spawning
-const maximumBubbles = 1500
+const maximumBubbles = 1
 const bubbleFlowRate = 1// Multiplier for bubble spawns
 let dynamicFlowRate = bubbleFlowRate
 const bubbleFlowPrejudiceRate = 1.015 // Multiplier applied to dynamicRate when spawn fails(except at max pop)
