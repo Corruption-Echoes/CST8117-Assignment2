@@ -11,7 +11,6 @@
     $G = $_REQUEST["G"];
     $U = $_REQUEST["U"];
     $requestType='';
-    echo $requestType;
     $dataPacket='';
     $SQL='';
     //Figure out which request it is and grab the data packet
@@ -31,6 +30,7 @@
         $requestType='U';
         $dataPacket=$U;
     }
+    echo $requestType;
     //Unpack the dataPacket into an array
     echo $dataPacket;
     $unpackedPacket=explode(':', $dataPacket);
