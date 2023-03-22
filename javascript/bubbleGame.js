@@ -94,7 +94,7 @@ function bubbleWander (bubble) {
 function bubbleAnimate (bubble) {
   if (bubble.onclick == null) {
     const x = bubble.firstChild.src
-     //console.log(x)
+    // console.log(x)
     if (Math.random() > 0.7) {
       if (x.includes('ubble.')) {
         bubble.firstChild.src = 'images/pop1.png'
