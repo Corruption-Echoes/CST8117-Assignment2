@@ -18,6 +18,6 @@ function sendQuery(mode, dataPacket,returnFunction){
     console.log('Sending Query')
     const xhttpRequest=new XMLHttpRequest()
     xhttpRequest.onload=function(){returnFunction(this.responseText)}
-    xhttpRequest.open("GET","php/QueryDatabase.php?"+mode+"="+dataPacket+";")
+    xhttpRequest.open("GET","PHP/QueryDatabase.php?"+mode+"="+dataPacket+";")
     xhttpRequest.send()
 }
