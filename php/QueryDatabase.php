@@ -45,6 +45,7 @@
             break;
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users";
+            echo "statement was G";
             break;
         case "U":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%"+$unpackedPacket[0]+"%'";
@@ -54,7 +55,7 @@
             break;
     }
     //Run the query!
-    //echo $SQL;
+    echo $SQL;
     $result=$mysqli->query($SQL);
     //Screw it give the Javascript side a puzzle to solve in how it interprets this mess!
     echo $result;
