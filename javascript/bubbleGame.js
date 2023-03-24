@@ -183,8 +183,8 @@ function update () {
   } else if (bubbles.length > 0) {
     Array.prototype.forEach.call(bubbles, bubbleWander)
     Array.prototype.forEach.call(bubbles, bubbleAnimate)
+    bubbleSpawnCheck(bubbles)
   }
-  bubbleSpawnCheck(bubbles)
 }
 // Initialize the boards and start the loop
 document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
