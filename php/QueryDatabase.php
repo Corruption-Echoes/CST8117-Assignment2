@@ -4,7 +4,7 @@
     if(!$mysqli) {
         echo('A critical error occured: Could not connect to MariaDB');
     }
-    $myfile=fopen('bubbleLog.txt','a');
+    $myfile=fopen('./bubbleLog.txt','a');
     //Load the request data into memory
     $L = $_REQUEST["L"];
     $R = $_REQUEST["R"];
