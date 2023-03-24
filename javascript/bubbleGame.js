@@ -107,7 +107,7 @@ function bubbleAnimate (bubble) {
         bubble.firstChild.src = 'images/pop3.png'
       } else if (x.includes('p3')) {
         bubble.firstChild.src = 'images/pop4.png'
-    /  } else if (x.includes('p4')) {
+      } else if (x.includes('p4')) {
         bubble.firstChild.src = 'images/pop5.png'
       } else if (x.includes('p5')) {
         bubble.firstChild.src = 'images/pop6.png'
@@ -180,14 +180,13 @@ function update () {
   if (gameTime > gameLength) {
     clearInterval(intervalID)
     setTimeout(wipeBubble, animationSpeed * 3)
-  }else{
-  bubbleSpawnCheck(bubbles)
+  }else {
+    bubbleSpawnCheck(bubbles)
   }
   if (bubbles.length > 0) {
     Array.prototype.forEach.call(bubbles, bubbleWander)
     Array.prototype.forEach.call(bubbles, bubbleAnimate)
   }
-       
 }
 // Initialize the boards and start the loop
 document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
