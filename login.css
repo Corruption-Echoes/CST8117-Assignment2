@@ -18,6 +18,7 @@ main {
 
 img {
   width: 40vw;
+  margin-left: 150px;
 }
 
 form {
@@ -59,7 +60,7 @@ form {
   margin-top: 50px;
   padding: 10px;
   grid-column: 2 / 3;
-  background-color: #90C5C9;
+  background-color:  #DEB620;
   border: 1px solid;
   border-radius: 7.5px;
   font-size: 25px;
@@ -68,3 +69,4 @@ form {
   font-weight: bold;
   text-align: center;
 }
+
