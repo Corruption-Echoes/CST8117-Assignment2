@@ -4,7 +4,7 @@
     if(!$mysqli) {
         echo('A critical error occured: Could not connect to MariaDB');
     }
-    $myfile=fopen('/var/www/hatml/bubble/php/bubbleLog.txt','a');
+    //$myfile=fopen('/var/www/hatml/bubble/php/bubbleLog.txt','a');
     //Load the request data into memory
     $L = $_REQUEST["L"];
     $R = $_REQUEST["R"];
@@ -57,7 +57,7 @@
             $SQL="INSERT INTO scores (user_id,score,play_date) VALUES ((SELECT idk_users FROM users WHERE username='"+$unpackedPacket[0]+"'),'"+$unpackedPacket[1]+"','"+date("Y/m/d h:i:s")+"')";
             break;
     }
-    fwrite($myfile,$SQL)
+    //fwrite($myfile,$SQL)
     //Run the query!
     //echo $SQL;
     $result=$mysqli->query($SQL);
