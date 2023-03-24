@@ -174,8 +174,8 @@ function update () {
   gameTime += animationSpeed
   // console.log(gameTime)
   if (gameTime > gameLength) {
-    clearInterval(intervalID)
     Array.prototype.forEach.call(bubbles, deleteBubble)
+    clearInterval(intervalID)
   } else if (bubbles.length > 0) {
     Array.prototype.forEach.call(bubbles, bubbleWander)
     Array.prototype.forEach.call(bubbles, bubbleAnimate)
