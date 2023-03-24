@@ -1,11 +1,16 @@
 const userInput = document.getElementById('username')
 const passwordInput = document.getElementById('password')
 const errorOut = document.getElementById('errorDisplay')
+
 if (localStorage('userID') !== null) {
   sendToGame()
 }
 function login () {
-  attemptLogin(userInput.value, passwordInput.value, loginResponseHandler)
+  if (validateInput) {
+    attemptLogin(userInput.value, passwordInput.value, loginResponseHandler)
+  }else {
+    loginResponseHandler('False')
+  }
 }
 function register () {
   const address = 'registration.html?u=' + userInput.value + '&p=' + passwordInput.value
@@ -22,4 +27,11 @@ function loginResponseHandler (data) {
 function sendToGame () {
   const address = 'game.html'
   window.location.href = address
+}
+function validateInput (stringIn) {
+  stringIn = stringIn.toLowerCase()
+  if (stringIn === '' || stringIn.includes(';', ''`'```)) {
+    return false
+  }
+  return true
 }

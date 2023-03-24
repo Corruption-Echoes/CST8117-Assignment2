@@ -1,9 +1,3 @@
-const loggedIn = () => {
-  if (true) {
-    return true
-  }
-  return false
-}
 
 // check for input validation and alert if getting empty input
 const user = document.getElementById('username')
