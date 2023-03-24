@@ -57,7 +57,7 @@
             break;
     }
     //Run the query!
-    //echo $SQL;
+    echo $SQL;
     $result=$mysqli->query($SQL);
     $rank=1;
     if($result->num_rows>0){
