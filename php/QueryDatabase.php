@@ -33,15 +33,16 @@
     //echo $requestType;
     //Unpack the dataPacket into an array
     //echo $dataPacket;
-    $unpackedPacket=explode(':', $dataPacket);
+    $unpackedPacket=str_split(':', $dataPacket);
     $SQL='';
     //Handle the SQL creation
     switch($requestType){
         case "L":
-            $SQL="SELECT COUNT(*) FROM users WHERE username='"+$unpackedPacket[0]+"' AND password='"+$unpackedPacket[1]+"'";
+            $SQL="SELECT idk_users FROM users WHERE username='".$unpackedPacket[0]."' AND password='".$unpackedPacket[1]."'";
+            //echo "Statement Type was L. SQL is:".$SQL;
             break;
         case "R":
-            $SQL="INSERT INTO users (username,password,email,phone) VALUES ('"+$unpackedPacket[0]+"','"+$unpackedPacket[1]+"','"+$unpackedPacket[2]+"','"+$unpackedPacket[3]+"')";
+            $SQL="INSERT INTO users (username,password,email,phone) VALUES ('".$unpackedPacket[0]."','".$unpackedPacket[1]."','".$unpackedPacket[2]+"','".$unpackedPacket[3]."')";
             break;
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users ORDER BY score DESC";
@@ -49,7 +50,7 @@
             echo "<table class='HST'>";
             break;
         case "U":
-            $SQL="SELECT u.username,s.score as points,s.play_date,(SELECT COUNT(*) FROM scores WHERE score>points) FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%"+$unpackedPacket[0]+"%'";
+            $SQL="SELECT u.username,s.score as points,s.play_date,(SELECT COUNT(*) FROM scores WHERE score>points) FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%".$unpackedPacket[0]."%'";
             echo "<table class='HST'>";
             break;
         case "H":
@@ -69,13 +70,13 @@
                 echo "<tr><td class='HS'>",$row["rank"],"</td><td class='HS'>",$row["username"],"</td><td class='HS'>",$row["score"],"</td><td class='HS'>",$row["play_date"],"</td></tr>";
             }
             else{
-                echo "True";
+                echo $row["idk_users"];
             }
         }
         if($requestType=="G"||$requestType=='U'){
             echo "</table>";
         }
     }else{
-        return "False";
+        echo "False";
     }
 ?>

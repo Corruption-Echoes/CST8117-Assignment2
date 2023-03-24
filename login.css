@@ -4,11 +4,7 @@ body {
   font-family: 'Indie Flower', cursive;
   font-size: larger;
   font-weight: bold;
-  
-
 }
-
-
 
 main {
   display: flex;
@@ -26,6 +22,18 @@ form {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   justify-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.alert-msg {
+  margin: 10px 0;
+  padding: 0 5px;
+  grid-column: 2 / 3;
+  background-color: #ffdddd;
+  border: 1px solid #dd0000;
 }
 
 .form-line {
@@ -57,7 +65,7 @@ form {
 
 .login-btn {
   width: 70%;
-  margin-top: 50px;
+  margin: 25px 0;
   padding: 10px;
   grid-column: 2 / 3;
   background-color:  #DEB620;
@@ -69,4 +77,3 @@ form {
   font-weight: bold;
   text-align: center;
 }
-
