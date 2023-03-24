@@ -180,13 +180,14 @@ function update () {
   if (gameTime > gameLength) {
     clearInterval(intervalID)
     setTimeout(wipeBubble, animationSpeed * 3)
-  } else{
-    if (bubbles.length > 0) {
-      Array.prototype.forEach.call(bubbles, bubbleWander)
-      Array.prototype.forEach.call(bubbles, bubbleAnimate)
-    }
-    bubbleSpawnCheck(bubbles)
-  }     
+  }else{
+  bubbleSpawnCheck(bubbles)
+  }
+  if (bubbles.length > 0) {
+    Array.prototype.forEach.call(bubbles, bubbleWander)
+    Array.prototype.forEach.call(bubbles, bubbleAnimate)
+  }
+       
 }
 // Initialize the boards and start the loop
 document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
