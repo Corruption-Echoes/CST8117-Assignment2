@@ -8,7 +8,7 @@ if (localStorage('userID') !== null) {
 function login () {
   if (validateInput) {
     attemptLogin(userInput.value, passwordInput.value, loginResponseHandler)
-  }else {
+  } else {
     loginResponseHandler('False')
   }
 }
@@ -31,6 +31,7 @@ function sendToGame () {
 function validateInput (stringIn) {
   stringIn = stringIn.toLowerCase()
   if (stringIn === '' || stringIn.includes(';', ''`'```)) {
+    console.log('returning false')
     return false
   }
   return true
