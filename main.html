@@ -8,6 +8,12 @@
     <title>Log In</title>
     <link rel="stylesheet" href="bubble.css">
     <link rel="stylesheet" href="login.css">
+    <script>
+        if (localStorage.getItem('userID') !== null) {
+            const address = 'game.html'
+            window.location.href = address
+        }
+    </script>
 </head>
 
 <body>
