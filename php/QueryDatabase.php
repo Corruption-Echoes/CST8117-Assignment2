@@ -61,7 +61,7 @@
     //Run the query!
     //echo $SQL;
     $result=$mysqli->query($SQL);
-    fwrite($myfile,$result)
+    //fwrite($myfile,$result)
     $rank=1;
     if($result->num_rows>0){
         while($row=$result->fetch_assoc()){
