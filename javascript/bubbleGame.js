@@ -172,7 +172,7 @@ function deleteBubble (bubble) {
 function update () {
   const bubbles = document.getElementsByClassName('bubble')
   gameTime += animationSpeed
-  console.log(gameTime)
+  // console.log(gameTime)
   if (gameTime > gameLength) {
     clearInterval(intervalID)
     Array.prototype.forEach.call(bubbles, deleteBubble)
