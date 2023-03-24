@@ -65,7 +65,7 @@
     $rank=1;
     if($result->num_rows>0){
         while($row=$result->fetch_assoc()){
-            if($requestType=="G" ||$requestType=='U'){
+            if($requestType=="G"){
                 echo "<tr><td class='HS'>",$rank,"</td><td class='HS'>",$row["username"],"</td><td class='HS'>",$row["score"],"</td><td class='HS'>",$row["play_date"],"</td></tr>";
                 $rank++;
             }else if($requestType=='U'){
