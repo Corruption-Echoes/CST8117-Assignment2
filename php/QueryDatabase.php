@@ -33,7 +33,7 @@
     echo $requestType;
     //Unpack the dataPacket into an array
     //echo $dataPacket;
-    $unpackedPacket=str_split(':', $dataPacket);
+    $unpackedPacket=explode(':', $dataPacket);
     $SQL='';
     //Handle the SQL creation
     switch($requestType){
