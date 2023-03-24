@@ -30,7 +30,7 @@
         $requestType="U";
         $dataPacket=$U;
     }
-    echo $requestType;
+    //echo $requestType;
     //Unpack the dataPacket into an array
     //echo $dataPacket;
     $unpackedPacket=explode(':', $dataPacket);
@@ -59,7 +59,7 @@
     }
     //fwrite($myfile,$SQL)
     //Run the query!
-    echo $SQL;
+    //echo $SQL;
     $result=$mysqli->query($SQL);
     //fwrite($myfile,$result)
     $rank=1;
