@@ -81,5 +81,4 @@
     }else{
         echo "False";
     }
-    fclose($myfile);
 ?>
