@@ -165,7 +165,7 @@ function logout () {
   const address = 'main.html'
   window.location.href = address
 }
-wipeBubble(){
+function wipeBubble () {
   const bubbles = document.getElementsByClassName('bubble')
   Array.prototype.forEach.call(bubbles, deleteBubble)
 }
