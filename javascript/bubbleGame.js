@@ -168,6 +168,10 @@ function logout () {
 function wipeBubble () {
   const bubbles = document.getElementsByClassName('bubble')
   Array.prototype.forEach.call(bubbles, deleteBubble)
+  gameTime--
+  if (gameTime < 0) {
+    clearInterval(intervalID)
+  }
 }
 function deleteBubble (bubble) {
   bubble.remove()
@@ -179,8 +183,9 @@ function update () {
   // console.log(gameTime)
   if (gameTime > gameLength) {
     clearInterval(intervalID)
-    setTimeout(wipeBubble, animationSpeed * 3)
-  }else {
+    intervalID = setInterval(wipeBubble, animationSpeed * 3)
+    gameTime = 3
+  } else {
     bubbleSpawnCheck(bubbles)
   }
   if (bubbles.length > 0) {
