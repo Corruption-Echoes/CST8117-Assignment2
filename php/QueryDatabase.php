@@ -38,7 +38,7 @@
     //Handle the SQL creation
     switch($requestType){
         case "L":
-            $SQL="SELECT COUNT(*) FROM users WHERE username='".$unpackedPacket[0]."' AND password='".$unpackedPacket[1]."'";
+            $SQL="SELECT idk_users FROM users WHERE username='".$unpackedPacket[0]."' AND password='".$unpackedPacket[1]."'";
             //echo "Statement Type was L. SQL is:".$SQL;
             break;
         case "R":
@@ -70,7 +70,7 @@
                 echo "<tr><td class='HS'>",$row["rank"],"</td><td class='HS'>",$row["username"],"</td><td class='HS'>",$row["score"],"</td><td class='HS'>",$row["play_date"],"</td></tr>";
             }
             else{
-                echo "True";
+                echo $row["idk_users"];
             }
         }
         if($requestType=="G"||$requestType=='U'){
