@@ -38,6 +38,7 @@
     //Handle the SQL creation
     switch($requestType){
         case "L":
+            echo "Statement Type was L"
             $SQL="SELECT COUNT(*) FROM users WHERE username='"+$unpackedPacket[0]+"' AND password='"+$unpackedPacket[1]+"'";
             break;
         case "R":
