@@ -16,6 +16,9 @@ const overflowModeWrap = true
 // Controls the fps (animation smoothness) bubble speed SCALES exponentially with this
 const desiredFPS = 60
 const animationSpeed = 1000 / desiredFPS
+const gameLength = 60000
+let gameTime = 0
+let intervalID = ''
 // Controls automated bubble spawning
 const maximumBubbles = 100
 const bubbleFlowRate = 1// Multiplier for bubble spawns
@@ -157,10 +160,22 @@ function bubbleSpawnCheck (bubbles) {
     }
   }
 }
+function logout () {
+  localStorage.removeItem('userID')
+  const address = 'main.html'
+  window.location.href = address
+}
+function deleteBubble (bubble) {
+  bubble.remove()
+}
 // Core update loop
 function update () {
   const bubbles = document.getElementsByClassName('bubble')
-  if (bubbles.length > 0) {
+  gameTime += animationSpeed
+  if (gameTime > gameLength) {
+    clearInterval(intervalID)
+    Array.prototype.forEach.call(bubbles, deleteBubble)
+  } else if (bubbles.length > 0) {
     Array.prototype.forEach.call(bubbles, bubbleWander)
     Array.prototype.forEach.call(bubbles, bubbleAnimate)
   }
@@ -169,4 +184,4 @@ function update () {
 // Initialize the boards and start the loop
 document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
 document.getElementById('streakboard').textContent = streakBoardTemplate + '0'
-setInterval(update, animationSpeed)
+intervalID = setInterval(update, animationSpeed)
