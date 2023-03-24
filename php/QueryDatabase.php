@@ -76,6 +76,6 @@
             echo "</table>";
         }
     }else{
-        return "False";
+        echo "False";
     }
 ?>
