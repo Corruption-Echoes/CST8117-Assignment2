@@ -18,7 +18,7 @@ function register () {
 }
 function loginResponseHandler (data) {
   if (data !== 'False') {
-    localStorage('userID') === parseInt(data)
+    localStorage.getItem('userID') === parseInt(data)
     sendToGame()
   } else {
     errorOut.textContent = "That's not a valid username/password combination."
