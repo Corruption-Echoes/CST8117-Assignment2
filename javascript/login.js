@@ -2,7 +2,7 @@ const userInput = document.getElementById('username')
 const passwordInput = document.getElementById('password')
 const errorOut = document.getElementById('errorDisplay')
 
-if (localStorage('userID') !== null) {
+if (localStorage.getItem('userID') !== null) {
   sendToGame()
 }
 function login () {
