@@ -165,6 +165,10 @@ function logout () {
   const address = 'main.html'
   window.location.href = address
 }
+wipeBubble(){
+  const bubbles = document.getElementsByClassName('bubble')
+  Array.prototype.forEach.call(bubbles, deleteBubble)
+}
 function deleteBubble (bubble) {
   bubble.remove()
 }
@@ -174,8 +178,8 @@ function update () {
   gameTime += animationSpeed
   // console.log(gameTime)
   if (gameTime > gameLength) {
-    Array.prototype.forEach.call(bubbles, deleteBubble)
     clearInterval(intervalID)
+    setTimeout(wipeBubble, animationSpeed * 3)
   } else if (bubbles.length > 0) {
     Array.prototype.forEach.call(bubbles, bubbleWander)
     Array.prototype.forEach.call(bubbles, bubbleAnimate)
