@@ -39,7 +39,7 @@
     switch($requestType){
         case "L":
             $SQL="SELECT COUNT(*) FROM users WHERE username='"+$unpackedPacket[0]+"' AND password='"+$unpackedPacket[1]+"'";
-            echo "Statement Type was L. SQL is:"+$SQL;
+            echo "Statement Type was L. SQL is:",$SQL;
             break;
         case "R":
             $SQL="INSERT INTO users (username,password,email,phone) VALUES ('"+$unpackedPacket[0]+"','"+$unpackedPacket[1]+"','"+$unpackedPacket[2]+"','"+$unpackedPacket[3]+"')";
