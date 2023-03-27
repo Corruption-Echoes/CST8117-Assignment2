@@ -180,6 +180,7 @@ function deleteBubble (bubble) {
 function update () {
   const bubbles = document.getElementsByClassName('bubble')
   gameTime += animationSpeed
+  Decorative.style.height = playHeight * (gameLength / gameTime) + 'px'
   // console.log(gameTime)
   if (gameTime > gameLength) {
     clearInterval(intervalID)
