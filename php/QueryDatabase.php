@@ -47,7 +47,7 @@
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users ORDER BY score DESC";
             //echo "statement was G";
-            echo "<table class='HST'>";//<table><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr></table>
+            echo "<table class='HST'>";//<table><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr></table><!--
             break;
         case "U":
             $SQL="SELECT u.username,s.score as points,s.play_date,(SELECT COUNT(*) FROM scores WHERE score>points) FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%".$unpackedPacket[0]."%'";
@@ -80,5 +80,5 @@
         }
     }else{
         echo "False";
-    }
+    }//--!>
 ?>
