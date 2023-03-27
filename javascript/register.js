@@ -4,8 +4,6 @@ const passwordConfirm = document.getElementById('confirm-password')
 const email = document.getElementById('email')
 const phone = document.getElementById('phone')
 
-const errorOut = document.getElementById('errorDisplay')
-
 function register () {
   if (validateInput(userInput.value) && validateInput(passwordInput.value) && validateInput(email.value) && validateInput(phone.value) && passwordInput.value === passwordConfirm.value) {
     attemptRegister(userInput.value, passwordInput.value, email.value, phone.value, registerResponseHandler)
@@ -17,7 +15,7 @@ function registerResponseHandler (data) {
     localStorage.setItem('userID', data)
     sendToGame()
   } else {
-    errorOut.textContent = 'You have been banned.'
+    console.log('You have been banned')
   }
 }
 function sendToGame () {
