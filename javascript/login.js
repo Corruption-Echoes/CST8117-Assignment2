@@ -3,7 +3,7 @@ const passwordInput = document.getElementById('password')
 const errorOut = document.getElementById('errorDisplay')
 
 function login () {
-  if (validateInput) {
+  if (validateInput(userInput.value) && validateInput(passwordInput.value)) {
     attemptLogin(userInput.value, passwordInput.value, loginResponseHandler)
   } else {
     loginResponseHandler('False')
@@ -27,7 +27,7 @@ function sendToGame () {
 }
 function validateInput (stringIn) {
   stringIn = stringIn.toLowerCase()
-  if (stringIn === '' || stringIn.includes(';', ''`'```)) {
+  if (stringIn === '' || stringIn.includes(';', ''`'```, ''`"```)) {
     console.log('returning false')
     return false
   }
