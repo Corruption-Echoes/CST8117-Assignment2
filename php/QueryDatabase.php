@@ -42,7 +42,7 @@
             break;
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users ORDER BY score DESC";
-            echo "<table class='HST'>";//<table><tr><td class='HS'>#1</td><td>SampleMan</td><td>Over 9000</td><td>Big bang</td></tr><tr><td class='HS'>#2</td><td>Jack</td><td>H</td><td>Tomorrow</td></tr><tr><td class='HS'>less than 2</td><td>NO</td><td>50000000000000</td><td>Yesterday</td></tr><tr><td class='HS'>55</td><td class='HS'>Name McName</td><td class='HS'>-50</td><td class='HS'>Today</td></tr></table><!--
+            echo "<table class='HST'><tr><th>Rank</th><th>Player</th><th>Score</th><th>Date</th></tr>";//<table><tr><th>Rank</th><th>Player</th><th>Score</th><th>Date</th></tr><tr><td class='HS'>#1</td><td>SampleMan</td><td>Over 9000</td><td>Big bang</td></tr><tr><td class='HS'>#2</td><td>Jack</td><td>H</td><td>Tomorrow</td></tr><tr><td class='HS'>less than 2</td><td>NO</td><td>50000000000000</td><td>Yesterday</td></tr><tr><td class='HS'>55</td><td class='HS'>Name McName</td><td class='HS'>-50</td><td class='HS'>Today</td></tr></table><!--
             break;
         case "U":
             $SQL="SELECT u.username,s.score as points,s.play_date,(SELECT COUNT(*) FROM scores WHERE score>points) FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%".$unpackedPacket[0]."%'";
