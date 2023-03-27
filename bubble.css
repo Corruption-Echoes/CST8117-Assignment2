@@ -23,29 +23,46 @@
 }
 #BubbleContainer{
     position: relative;
-    height:98vh;
-    width:80vw;
+    margin-top: 225px;
+    height: 500px;
+    width: 250px;
     vertical-align: bottom;
-    background-color: blue;
+    background-color: #ffffff00;
 }
+
 #score{
     color: red;
     font-size: xx-large;
-    z-index: 2;
 }
 
 #score-miniBoard{
-    width: 500px;
+    position: absolute;
+    width: 300px;
     height: 150px;
     background-color: #DBD3BE;
     border: 5px solid #DEB620;
     margin: 15px;
     font-size: 25px;
     text-align: center;
-
+    z-index: 2;
 }
-.outer-box{
+
+.game {
     display: flex;
+    justify-content: center;
+}
+
+.bg-cup {
+    position: absolute;
+    height: auto;
+    width: 600px;
+    z-index: -10;
+}
+
+.game-block {
+    z-index: 1;
+    display: flex;
+
 }
 
 body{
