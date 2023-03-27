@@ -97,7 +97,6 @@ img{
 .custLeft{
     width: 40%;
     height: 600px;
-
 }
 
 .custRight{
@@ -109,20 +108,26 @@ img{
     border: 5px solid;
     width: 60%;
     height: 600px;
-
-
 }
 
 .flavour{
     border: 1px solid;
     width: 30%;
     height: 300px;
-
 }
 
 .flavour{
     border: 1px solid;
     width: 30%;
     height: 300px;
+}
 
+#personalContainer {
+    background-color: #D97969;
+}
+
+#highscoreContainer {
+    background-color: #DEB620;
+    font-size: large;
+    font-family: 'Indie Flower', cursive;
 }
