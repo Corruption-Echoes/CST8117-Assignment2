@@ -16,7 +16,7 @@ const overflowModeWrap = true
 // Controls the fps (animation smoothness) bubble speed SCALES exponentially with this
 const desiredFPS = 60
 const animationSpeed = 1000 / desiredFPS
-const gameLength = 6000
+const gameLength = 60000
 let gameTime = 0
 let intervalID = ''
 // Controls automated bubble spawning
