@@ -144,11 +144,21 @@ img{
 
 #personalContainer {
     background-color: #D97969;
-    font-size: 30px;
     font-family: 'Indie Flower', cursive;
 }
 
 #highscoreContainer {
-    background-color: #DEB620;
+
    
+}
+table td{
+    width: 60%;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;  
+    padding-left: 100px; 
+    padding-right: 100px;
+    border: 3px solid white;
+    margin: 10px;
+    background-color: #DEB620;
 }
