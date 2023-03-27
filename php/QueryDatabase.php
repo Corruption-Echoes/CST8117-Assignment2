@@ -4,7 +4,6 @@
     if(!$mysqli) {
         echo('A critical error occured: Could not connect to MariaDB');
     }
-    //$myfile=fopen('/var/www/hatml/bubble/php/bubbleLog.txt','a');
     //Load the request data into memory
     $L = $_REQUEST["L"];
     $R = $_REQUEST["R"];
@@ -30,24 +29,20 @@
         $requestType="U";
         $dataPacket=$U;
     }
-    //echo $requestType;
     //Unpack the dataPacket into an array
-    //echo $dataPacket;
     $unpackedPacket=explode(':', $dataPacket);
     $SQL='';
     //Handle the SQL creation
     switch($requestType){
         case "L":
             $SQL="SELECT idk_users FROM users WHERE username='".$unpackedPacket[0]."' AND password='".$unpackedPacket[1]."'";
-            //echo "Statement Type was L. SQL is:".$SQL;
             break;
         case "R":
             $SQL="INSERT INTO users (username,password,email,phone) VALUES ('".$unpackedPacket[0]."','".$unpackedPacket[1]."','".$unpackedPacket[2]+"','".$unpackedPacket[3]."')";
             break;
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users ORDER BY score DESC";
-            //echo "statement was G";
-            echo "<table class='HST'>";//<table><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr></table><!--
+            echo "<table class='HST'>";//<table><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td>Name</td><td>Score</td><td>Date</td></tr><tr><td class='HS'>Rank</td><td class='HS'>Name</td><td class='HS'>Score</td><td class='HS'>Date</td></tr></table><!--
             break;
         case "U":
             $SQL="SELECT u.username,s.score as points,s.play_date,(SELECT COUNT(*) FROM scores WHERE score>points) FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.username LIKE '%".$unpackedPacket[0]."%'";
@@ -80,5 +75,5 @@
         }
     }else{
         echo "False";
-    }//--!>
+    }//
 ?>
