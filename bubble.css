@@ -122,12 +122,16 @@ img{
     height: 300px;
 }
 
+
+/* highScore page */
+
 #personalContainer {
     background-color: #D97969;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
 }
 
 #highscoreContainer {
     background-color: #DEB620;
-    font-size: large;
-    font-family: 'Indie Flower', cursive;
+   
 }
