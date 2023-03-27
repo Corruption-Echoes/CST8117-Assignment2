@@ -26,7 +26,7 @@ function sendToGame () {
 }
 
 function validateInput (stringIn) {
-  stringIn = stringIn.toLowerCse()
+  stringIn = stringIn.toLowerCase()
   if (stringIn === '' || stringIn.includes(';', ''`'```, ''`"```)) {
     console.log('returning false')
     return false
