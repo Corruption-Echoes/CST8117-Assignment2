@@ -13,7 +13,9 @@ function printPersonalHighscores (leaderboardData) {
 }
 function loadHighscores () {
   getHighscores(printHighscores)
-  if (userName !== null) { getHighscore(userName, printPersonalHighscores) }
+  if (userID !== null) {
+    getHighscore(userID, printPersonalHighscores)
+  }
 }
 
 loadHighscores()
