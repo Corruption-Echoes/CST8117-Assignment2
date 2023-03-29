@@ -20,7 +20,7 @@ function registerResponseHandler (data) {
 }
 function sendToGame () {
   const address = 'game.html'
-  window.location.href = address
+  //window.location.href = address
 }
 
 function validateInput (stringIn) {
