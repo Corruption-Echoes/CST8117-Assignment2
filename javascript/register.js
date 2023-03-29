@@ -11,7 +11,7 @@ function register () {
 }
 
 function registerResponseHandler (data) {
-  console.log(data)
+  //console.log(data)
   if (data !== 'False') {
     localStorage.setItem('userID', data)
     sendToGame()
@@ -21,7 +21,7 @@ function registerResponseHandler (data) {
 }
 function sendToGame () {
   const address = 'game.html'
-  //window.location.href = address
+  window.location.href = address
 }
 
 function validateInput (stringIn) {
