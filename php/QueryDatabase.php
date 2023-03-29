@@ -54,7 +54,7 @@
     }
     //fwrite($myfile,$SQL)
     //Run the query!
-    //echo $SQL;
+    echo $SQL;
     $result=$mysqli->query($SQL);
     //fwrite($myfile,$result)
     $rank=1;
