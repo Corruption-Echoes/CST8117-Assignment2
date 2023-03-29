@@ -168,8 +168,8 @@ function logout () {
 function wipeBubble () {
   const bubbles = document.getElementsByClassName('bubble')
   Array.prototype.forEach.call(bubbles, deleteBubble)
-  gameTime--
-  if (gameTime < 0) {
+  const nbubbles=document.getElementsByClassName('bubble')
+  if (nbubbles.length>0) {
     clearInterval(intervalID)
   }
 }
@@ -185,7 +185,7 @@ function update () {
   if (gameTime > gameLength) {
     clearInterval(intervalID)
     intervalID = setInterval(wipeBubble, animationSpeed * 3)
-    gameTime = 3
+    registerHighscore(score,replay)
   } else {
     bubbleSpawnCheck(bubbles)
   }
@@ -193,6 +193,9 @@ function update () {
     Array.prototype.forEach.call(bubbles, bubbleWander)
     Array.prototype.forEach.call(bubbles, bubbleAnimate)
   }
+}
+function replay(){
+
 }
 // Initialize the boards and start the loop
 document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
