@@ -1,7 +1,7 @@
 // Gets the neccesary field variables
 const bubbleContainer = document.getElementById('BubbleContainer')
 const Decorative = document.getElementsByClassName('decorative')
-Decorative.style.backgroundColor = 'red'
+// Decorative.style.backgroundColor = 'red'
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
 // Controls bubble position offset(for centering)
@@ -169,8 +169,8 @@ function logout () {
 function wipeBubble () {
   const bubbles = document.getElementsByClassName('bubble')
   Array.prototype.forEach.call(bubbles, deleteBubble)
-  const nbubbles=document.getElementsByClassName('bubble')
-  if (nbubbles.length>0) {
+  const nbubbles = document.getElementsByClassName('bubble')
+  if (nbubbles.length > 0) {
     clearInterval(intervalID)
   }
 }
@@ -186,7 +186,7 @@ function update () {
   if (gameTime > gameLength) {
     clearInterval(intervalID)
     intervalID = setInterval(wipeBubble, animationSpeed * 3)
-    registerHighscore(score,replay)
+    registerHighscore(score, replay)
   } else {
     bubbleSpawnCheck(bubbles)
   }
@@ -195,7 +195,7 @@ function update () {
     Array.prototype.forEach.call(bubbles, bubbleAnimate)
   }
 }
-function replay(){
+function replay () {
 
 }
 // Initialize the boards and start the loop
