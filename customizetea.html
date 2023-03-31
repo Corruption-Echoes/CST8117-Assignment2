@@ -13,22 +13,26 @@
     <h1> Let's Get Popping ! </h1>
 
     <div class="mainMenu">
-        <div class="mainMenuItem"><a href="game.html">Back To Game</a> </div>
-        <div class="mainMenuItem"><a href="highscore.html"> Score </a> </div>
-        <div class="mainMenuItem"><a href="main.html">Log Out</a> </div>
+        <div class="mainMenuItem"><a href="game.html">Back To Game</a></div>
+        <div class="mainMenuItem"><a href="highscore.html">Score</a></div>
+        <div class="mainMenuItem"><a href="main.html">Log Out</a></div>
     </div>
 
     <div class="custOuter">
-        <div class="custLeft"></div>
+        <div class="custLeft">
+            <img src="images/cup1.png" alt="tea" id="customize-cup">
+            <div id="tea"></div>
+            <button id="save-tea" type="submit">Save</button>
+        </div>
         <div class="custRight">
             <div class="Flavour">
                 <h2>Chose you Flavour</h2>
                 <ul>
-                    <li>Green Tea</li>
-                    <li>Chai Tea</li>
-                    <li>Coconut</li>
-                    <li>Taro</li>
-                    <li>WaterMelon</li>
+                    <li id="green-tea">Green Tea</li>
+                    <li id="chai">Chai Tea</li>
+                    <li id="coconut">Coconut</li>
+                    <li id="taro">Taro</li>
+                    <li id="watermelon">WaterMelon</li>
                 </ul>
             </div>
             <div class="bubbleType">
@@ -38,13 +42,12 @@
                     <li>Pudding</li>
                     <li>Grass Jelly</li>
                     <li>Mango</li>
+                </ul>
             </div>
-
         </div>
     </div>
 
-
-
+    <script src="javascript/customize.js"></script>
 
 </body>
 </html>
