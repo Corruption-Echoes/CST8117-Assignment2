@@ -10,6 +10,9 @@
     border-radius: 250px;
     font-size: xx-large;
 }
+.decorative{
+    background-color: red;
+}
 .pointGiver{
     color: lightgray;
 }

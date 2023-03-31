@@ -1,6 +1,7 @@
 // Gets the neccesary field variables
 const bubbleContainer = document.getElementById('BubbleContainer')
-const Decorative = bubbleContainer.classList.contains('decorative')
+const Decorative = document.getElementsByClassName('decorative')
+Decorative.style.backgroundColor = 'red'
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
 // Controls bubble position offset(for centering)
