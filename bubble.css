@@ -59,6 +59,16 @@
     z-index: -10;
 }
 
+#bg-tea {
+    margin-top: 250px;
+    border-top: 480px solid #B1CBA666;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 220px;
+    position: absolute;
+}
+
 .game-block {
     z-index: 1;
     display: flex;
@@ -114,6 +124,63 @@ img{
 .custLeft{
     width: 40%;
     height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#customize-cup {
+    position: absolute;
+    top: 350px;
+    width: 350px;
+    z-index: -5;
+}
+
+.green-tea {
+    margin-bottom: 110px;
+    border-top: 270px solid #B1CBA666;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 130px;
+}
+.chai {
+    margin-bottom: 110px;
+    border-top: 270px solid #B2833066;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 130px;
+}
+.coconut {
+    margin-bottom: 110px;
+    border-top: 270px solid #E9EDF666;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 130px;
+}
+.taro {
+    margin-bottom: 110px;
+    border-top: 270px solid #A3A6E866;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 130px;
+}
+.watermelon {
+    margin-bottom: 110px;
+    border-top: 270px solid #D23B6866;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 130px;
+}
+
+#save-tea {
+    height: 50px;
+    width: 150px;
+    position: absolute;
 }
 
 .custRight{
