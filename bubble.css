@@ -10,9 +10,6 @@
     border-radius: 250px;
     font-size: xx-large;
 }
-.decorative{
-    background-color: red;
-}
 .pointGiver{
     color: lightgray;
 }
@@ -143,17 +140,15 @@ img{
 }
 
 
-/* highScore page */
+/* Score page */
 
-#personalContainer {
+/* personalRank */
+#personalContainer{
     background-color: #D97969;
-    font-family: 'Indie Flower', cursive;
 }
+  
 
-#highscoreContainer {
-
-   
-}
+/* highscoreall */
 
 table td{
     width: 60%;
