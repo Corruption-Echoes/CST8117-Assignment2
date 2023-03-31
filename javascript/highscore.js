@@ -2,7 +2,7 @@
 const highscoreContainer = document.getElementById('highscoreContainer')
 const personalContainer = document.getElementById('personalConstainer')
 
-const userID = localStorage.getItem('userID')
+
 
 function printHighscores (leaderboardData) {
   // console.log('Data Received:' + leaderboardData)
@@ -14,7 +14,7 @@ function printPersonalHighscores (leaderboardData) {
 function loadHighscores () {
   getHighscores(printHighscores)
   if (userID !== null) {
-    getHighscore(userID, printPersonalHighscores)
+    getHighscore(printPersonalHighscores)
   }
 }
 

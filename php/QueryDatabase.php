@@ -38,7 +38,7 @@
             $SQL="SELECT idk_users FROM users WHERE username='".$unpackedPacket[0]."' AND password='".$unpackedPacket[1]."'";
             break;
         case "R":
-            $SQL="INSERT INTO users (username,password,email,phone) VALUES ('".$unpackedPacket[0]."','".$unpackedPacket[1]."','".$unpackedPacket[2]+"','".$unpackedPacket[3]."')";
+            $SQL="INSERT INTO users (username,password,email,phone) VALUES ('".$unpackedPacket[0]."','".$unpackedPacket[1]."','".$unpackedPacket[2]."','".$unpackedPacket[3]."')";
             break;
         case "G":
             $SQL="SELECT u.username,s.score,s.play_date FROM scores s INNER JOIN users u ON s.user_id=u.idk_users ORDER BY score DESC";
@@ -73,7 +73,7 @@
         if($requestType=="G"||$requestType=='U'){
             echo "</table>";
         }
-    }else{
+    }else if($requestType!="R"){
         echo "False";
     }//
 ?>

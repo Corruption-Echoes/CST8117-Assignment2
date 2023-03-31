@@ -11,6 +11,7 @@ function register () {
 }
 
 function registerResponseHandler (data) {
+  //console.log(data)
   if (data !== 'False') {
     localStorage.setItem('userID', data)
     sendToGame()
