@@ -86,6 +86,7 @@ h1{
     font-size: 80px;
     color: #D97969;
     font-weight: bold;
+    margin: 0;
 }
 
 img{
@@ -101,6 +102,7 @@ img{
     justify-content: space-evenly;
     height: 60px;
     padding: 10px, 10px, 10px, 10px;
+    margin: 15px 0px 5px 0px;
     font-family: 'Indie Flower', cursive;
     background-color: #90C5C9;
     
@@ -244,10 +246,15 @@ img {
 }
 
 form {
-  margin: 5% 0 5% 0;
+  margin: 2.5% 0 5% 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   justify-items: center;
+  font-weight: bold;
+}
+
+.error-msg { 
+    grid-column: 2 / 3;
 }
 
 .hide {
@@ -260,6 +267,10 @@ form {
   grid-column: 2 / 3;
   background-color: #ffdddd;
   border: 1px solid #dd0000;
+}
+
+#errorDisplay {
+    grid-column: 2/3;
 }
 
 .form-line {
@@ -287,6 +298,7 @@ form {
 
 .forgot-password a {
   color: inherit;
+  font-size: 15px;
 }
 
 .login-btn {
@@ -297,7 +309,7 @@ form {
   background-color:  #DEB620;
   border: 1px solid;
   border-radius: 7.5px;
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Indie Flower', cursive;
   font-size: larger;
   font-weight: bold;
