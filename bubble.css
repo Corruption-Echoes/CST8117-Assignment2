@@ -133,7 +133,7 @@ img{
 
 #customize-cup {
     position: absolute;
-    top: 350px;
+    top: 270px;
     width: 350px;
     z-index: -5;
 }
@@ -183,6 +183,21 @@ img{
     height: 50px;
     width: 150px;
     position: absolute;
+}
+
+#save-tea {
+    width: 150px;
+    margin: 25px 0;
+    padding: 10px;
+    grid-column: 2 / 3;
+    background-color:  #DEB620;
+    border: 1px solid;
+    border-radius: 7.5px;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
 }
 
 .custRight{
@@ -240,9 +255,9 @@ main {
   align-items: center;
 }
 
-img {
+.mainImage {
   width: 40vw;
-  margin-left: 150px;
+  margin-left: 10%;
 }
 
 form {
