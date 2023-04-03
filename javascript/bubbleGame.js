@@ -181,7 +181,10 @@ function deleteBubble (bubble) {
 function update () {
   const bubbles = document.getElementsByClassName('bubble')
   gameTime += animationSpeed
-  Decorative.style.height = ((playHeight) * (1 - (gameTime / gameLength))) + 'px'
+  Decorative.style.borderTop = ((playHeight) * (1 - (gameTime / gameLength))) + 'px solid ' + theme.tea[style.tea]
+  Decorative.style.top = playHeight - ((playHeight) * (1 - (gameTime / gameLength))) + (playHeight / 2.5) + 'px'
+  Decorative.style.borderRight = 'solid transparent ' + 50 * (1 - (gameTime / gameLength)) + 'px'
+  Decorative.style.borderLeft = 'solid transparent ' + 50 * (1 - (gameTime / gameLength)) + 'px'
   // console.log(gameTime)
   if (gameTime > gameLength) {
     clearInterval(intervalID)
