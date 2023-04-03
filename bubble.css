@@ -2,7 +2,19 @@
 
 
 /* GamePage */
-
+.decorative{
+    position: absolute;
+    bottom:-100%;
+    left:-25%;
+    width:150%;
+    background-color: bisque;
+    z-index: 0.5;
+    transform:rotateX(3.142rad);
+    transform-origin:top;
+}
+#cup{
+    z-index: 0.8;
+}
 .bubble{
     z-index: 1;
     position: absolute;

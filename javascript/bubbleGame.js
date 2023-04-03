@@ -1,6 +1,6 @@
 // Gets the neccesary field variables
 const bubbleContainer = document.getElementById('BubbleContainer')
-const Decorative = document.getElementsByClassName('decorative')
+const Decorative = document.getElementById('decorative')
 // Decorative.style.backgroundColor = 'red'
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
@@ -181,7 +181,7 @@ function deleteBubble (bubble) {
 function update () {
   const bubbles = document.getElementsByClassName('bubble')
   gameTime += animationSpeed
-  Decorative.style.height = playHeight * (gameLength / gameTime) + 'px'
+  Decorative.style.height = ((playHeight) * (1 - (gameTime / gameLength))) + 'px'
   // console.log(gameTime)
   if (gameTime > gameLength) {
     clearInterval(intervalID)
