@@ -1,6 +1,6 @@
 // Gets the neccesary field variables
 const bubbleContainer = document.getElementById('BubbleContainer')
-const Decorative = document.getElementById('decorative')
+const Decorative = document.getElementById('bg-tea')
 // Decorative.style.backgroundColor = 'red'
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
