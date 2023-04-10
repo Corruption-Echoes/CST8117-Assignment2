@@ -254,6 +254,7 @@ img{
 /* Score page */
 .middle{
     display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
