@@ -142,6 +142,20 @@ img{
     justify-content: center;
     align-items: flex-end;
 }
+.menuPic {
+   display: table-column;
+   position: absolute;
+   width: 700px;
+   margin: 5px 5px 5px 5px;
+   justify-content: center;
+}
+
+#scorePic{
+    width: 700px;
+    justify-content: center;
+    float: inline-end;
+}
+
 
 #customize-cup {
     position: absolute;
