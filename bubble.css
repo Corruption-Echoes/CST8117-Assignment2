@@ -156,7 +156,7 @@ img{
     height: 500px;
 }
 
-.bubble{
+.bubbles{
     width: 500px;
     height: 500px;
 }
@@ -169,15 +169,16 @@ img{
 
 .flavour-title{
     color: #fdeca6;
-    text-align: center;
+    justify-content: center;
     height: 80px;
     width: 600px ;
+    margin: 0px;
 }
 
 .menuOptions{
     display: flex;
     flex-direction: row;
-    height: 500px;
+    height: 300px;
 }
 
 #customize-cup {
@@ -251,7 +252,7 @@ img{
 
 .custRight{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     font-size: 30px;
     color: white;
     background-color: rgb(51, 59, 61);
@@ -259,6 +260,8 @@ img{
     width: 60%;
     height: 600px;
 }
+
+
 
 .flavour{
     border: 1px solid;
