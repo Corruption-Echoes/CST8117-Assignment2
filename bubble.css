@@ -298,7 +298,7 @@ img{
 .flexIMG{
     display: flex;
 }
-.flexIMG img{
+.scoreImg{
     width: 17%;
 }
 
