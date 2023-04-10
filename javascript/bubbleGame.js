@@ -60,23 +60,25 @@ function createBubble (mode) {
   }
   bubbleContainer.appendChild(construct)
 }
+function updateBoards () {
+  document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
+  document.getElementById('streakboard').textContent = streakBoardTemplate + streak
+}
 function addGoldPoints () {
   streak++
   score += scorePer * goldMultiplier * (streak * streakMultiplier)
-  document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
-  document.getElementById('streakboard').textContent = streakBoardTemplate + streak
+  updateBoards()
   this.onclick = null
 }
 function addPoints () {
   streak++
   score += scorePer * (streak * streakMultiplier)
-  document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
-  document.getElementById('streakboard').textContent = streakBoardTemplate + streak
+  updateBoards()
   this.onclick = null
 }
 function removeStreak () {
   streak = 0
-  document.getElementById('streakboard').textContent = streakBoardTemplate + streak
+  updateBoards()
   this.onclick = null
 }
 // Controls bubble movement
@@ -101,6 +103,7 @@ function bubbleAnimate (bubble) {
     // console.log(x)
     if (Math.random() > 0.7) {
       if (x.includes('ubble.')) {
+        bubble.style.zIndex = bubble.style.zIndex - 0.1
         bubble.firstChild.src = 'images/pop1.png'
       } else if (x.includes('p1')) {
         bubble.firstChild.src = 'images/pop2.png'
@@ -170,7 +173,7 @@ function wipeBubble () {
   const bubbles = document.getElementsByClassName('bubble')
   Array.prototype.forEach.call(bubbles, deleteBubble)
   const nbubbles = document.getElementsByClassName('bubble')
-  if (nbubbles.length > 0) {
+  if (nbubbles.length <= 0) {
     clearInterval(intervalID)
   }
 }
