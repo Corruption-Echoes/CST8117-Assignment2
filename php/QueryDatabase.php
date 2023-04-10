@@ -50,8 +50,6 @@
             break;
         case "H":
             $SQL="INSERT INTO scores (user_id,score,play_date) VALUES (".$unpackedPacket[0].",".$unpackedPacket[1].",'".date("Y/m/d")."')";
-            echo $SQL;
-            echo date("Y/m/d h:i:s");
             break;
     }
     //fwrite($myfile,$SQL)
