@@ -151,12 +151,31 @@ img{
    justify-content: center;
 }
 
+.flavour{
+    width: 500px;
+    height: 500px;
+}
+
+.bubble{
+    width: 500px;
+    height: 500px;
+}
+
 #scorePic{
     width: 700px;
     justify-content: center;
     float: inline-end;
 }
 
+.flavour-title{
+    color: #fdeca6;
+    text-align: center;
+}
+
+.menuOptions{
+    display: flex;
+    flex-direction: column;
+}
 
 #customize-cup {
     position: absolute;
