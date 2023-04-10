@@ -156,7 +156,7 @@ img{
     height: 500px;
 }
 
-.bubbles{
+.bubbleType{
     width: 500px;
     height: 500px;
 }
@@ -172,7 +172,7 @@ img{
     justify-content: center;
     height: 80px;
     width: 600px ;
-    margin: 0px;
+    margin: 3px, 3px, 3px, 3px;
 }
 
 .menuOptions{
@@ -268,13 +268,13 @@ img{
     width: 30%;
     height: 300px;
 }
-
+ /*
 .bubble{
     border: 1px solid;
     width: 30%;
     height: 300px;
 }
-
+*/
 
 /* Score page */
 .middle{
