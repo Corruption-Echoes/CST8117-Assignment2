@@ -47,9 +47,11 @@
         case "U":
             $SQL="SELECT u.username,s.score as points,s.play_date,(SELECT COUNT(*) FROM scores WHERE score>points) AS rank FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.user_id =".$unpackedPacket[0]."";
             echo "<table class='HST'>";//<br>Ignore everything below here
+            echo $SQL;
             break;
         case "H":
             $SQL="INSERT INTO scores (user_id,score,play_date) VALUES (".$unpackedPacket[0].",".$unpackedPacket[1].",'".date("Y/m/d")."')";
+            echo $SQL;
             break;
     }
     //fwrite($myfile,$SQL)
