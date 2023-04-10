@@ -170,11 +170,14 @@ img{
 .flavour-title{
     color: #fdeca6;
     text-align: center;
+    height: 80px;
+    width: 600px ;
 }
 
 .menuOptions{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    height: 500px;
 }
 
 #customize-cup {
@@ -263,7 +266,7 @@ img{
     height: 300px;
 }
 
-.flavour{
+.bubble{
     border: 1px solid;
     width: 30%;
     height: 300px;
