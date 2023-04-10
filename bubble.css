@@ -252,6 +252,10 @@ img{
 
 
 /* Score page */
+.middle{
+    display: flex;
+    text-align: center;
+}
 
 .personalContainer{
     width: 60%;
