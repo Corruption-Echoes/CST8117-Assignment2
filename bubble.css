@@ -295,6 +295,9 @@ img{
 .flexIMG{
     display: flex;
 }
+.flexIMG img{
+    width: 20%;
+}
 
 table td{
     margin: 15px 0px 15px 0px;
