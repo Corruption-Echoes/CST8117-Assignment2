@@ -284,14 +284,16 @@ img{
 }
 
 #personalContainer{
-    width: 60%;
-    background-color: #DEB620;
+    width: 60%
    
 }
 
 #highscoreContainer{
-    width: 60%;
-   
+    width: 60%; 
+}
+
+.flexIMG{
+    display: flex;
 }
 
 table td{
@@ -299,8 +301,6 @@ table td{
     font-size: 25px;
     font-weight: bold;
     justify-content: center;  
-    padding-left: 100px; 
-    padding-right: 100px;
     border: 3px solid #F8F8F8;
     background-color: #DEB620;
     border-radius: 08px;
