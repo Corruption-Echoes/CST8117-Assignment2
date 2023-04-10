@@ -49,7 +49,7 @@
             echo "<table class='HST'>";//<br>Ignore everything below here
             break;
         case "H":
-            $SQL="INSERT INTO scores (user_id,score,play_date) VALUES ((SELECT idk_users FROM users WHERE username='"+$unpackedPacket[0]+"'),'"+$unpackedPacket[1]+"','"+date("Y/m/d h:i:s")+"')";
+            $SQL="INSERT INTO scores (user_id,score,play_date) VALUES ((SELECT idk_users FROM users WHERE user_id='"+$unpackedPacket[0]+"'),'"+$unpackedPacket[1]+"','"+date("Y/m/d h:i:s")+"')";
             echo $SQL;
             break;
     }
