@@ -46,8 +46,8 @@
             break;
         case "U":
             $SQL="SELECT u.username,s.score as points,s.play_date,(SELECT COUNT(*) FROM scores WHERE score>points) rank FROM scores s INNER JOIN users u ON s.user_id=u.idk_users WHERE u.idk_users =".$unpackedPacket[0]." ORDER BY points DESC LIMIT 1";
-            echo "<table class='HST'>";//<br>Ignore everything below here
-            echo $SQL;
+            echo "<table class='HST'><tr><th>Rank</th><th>Player</th><th>Score</th><th>Date</th></tr>";//<br>Ignore everything below here
+            //echo $SQL;
             break;
         case "H":
             $SQL="INSERT INTO scores (user_id,score,play_date) VALUES (".$unpackedPacket[0].",".$unpackedPacket[1].",'".date("Y/m/d")."')";
