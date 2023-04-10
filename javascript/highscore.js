@@ -1,8 +1,6 @@
 
 const highscoreContainer = document.getElementById('highscoreContainer')
-const personalContainer = document.getElementById('personalConstainer')
-
-
+const personalContainer = document.getElementById('personalContainer')
 
 function printHighscores (leaderboardData) {
   // console.log('Data Received:' + leaderboardData)
