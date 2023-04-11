@@ -15,6 +15,9 @@
 #cup{
     z-index: 0.8;
 }
+
+
+
 .bubble{
     z-index: 1;
     position: absolute;
