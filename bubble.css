@@ -152,18 +152,16 @@ img{
    display: table-column;
    position: absolute;
    width: 40%;
-   margin: 370px 5px 5px 5px;
+   margin: 320px 5px 5px 5px;
    justify-content: center;
 }
 
-.flavour{
+.menuType{
  display: flex;
  text-align: center;
+ padding: 0px 50px;
 }
 
-.bubbleType{
-display: block;
-}
 
 #scorePic{
     width: 700px;
@@ -175,8 +173,17 @@ display: block;
     color: #fdeca6;
     text-align: center;
     justify-content: center;
-    margin: 5px,5px,5px,5px;
+    margin: 10px;
     padding-bottom: 0%;
+}
+
+.flavour-t2{
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
+.ul{
+    margin: 10px;
 }
 
 .menuOptions{
@@ -257,6 +264,7 @@ display: block;
 
 .custRight{
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-size: 30px;
     color: white;
