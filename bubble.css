@@ -49,14 +49,16 @@
 
 #score-miniBoard{
     position: absolute;
-    width: 300px;
+    width: 250px;
     height: 150px;
-    background-color: #DBD3BE;
-    border: 5px solid #DEB620;
+    background-color:bisque;
+    border: 15px solid #DEB620;
     margin: 15px;
     font-size: 25px;
+    font-weight: bold;
     text-align: center;
     z-index: 2;
+    border-radius: 3%;
 }
 
 .game {
@@ -146,19 +148,18 @@ img{
 #menuImage {
    display: table-column;
    position: absolute;
-   width: 530px;
+   width: 40%;
    margin: 370px 5px 5px 5px;
    justify-content: center;
 }
 
 .flavour{
-    width: 500px;
-    height: 500px;
+ display: flex;
+ text-align: center;
 }
 
 .bubbleType{
-    width: 500px;
-    height: 500px;
+display: block;
 }
 
 #scorePic{
@@ -169,16 +170,17 @@ img{
 
 .flavour-title{
     color: #fdeca6;
+    text-align: center;
     justify-content: center;
-    height: 80px;
-    width: 600px ;
-    margin: 3px, 3px, 3px, 3px;
+    margin: 5px,5px,5px,5px;
+    padding-bottom: 0%;
 }
 
 .menuOptions{
     display: flex;
     flex-direction: row;
     height: 300px;
+    margin-top: 5px;
 }
 
 #customize-cup {
@@ -267,6 +269,7 @@ img{
     border: 1px solid;
     width: 30%;
     height: 300px;
+    mar
 }
  /*
 .bubble{
