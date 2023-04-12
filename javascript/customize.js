@@ -1,11 +1,14 @@
 const style = { tea: '', bubble: '' }
-const storage = localStorage.getItem('style')
-const currentStyle = JSON.parse(storage)
-const currentTea = currentStyle.tea
 const tea = document.getElementById('tea')
-
-// initialize
-if (currentTea !== '') {
+const storage = localStorage.getItem('style')
+console.log(storage)
+if (storage) {
+  const currentStyle = JSON.parse(storage)
+  let currentTea = currentStyle.tea
+  // initialize
+  if (currentTea === 'greenTea') {
+    currentTea = 'green-tea'
+  }
   tea.classList.add(currentTea)
 } else {
   tea.classList.add('green-tea')

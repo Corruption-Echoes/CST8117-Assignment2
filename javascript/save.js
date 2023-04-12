@@ -11,7 +11,9 @@ const theme = {
 
 const storage = localStorage.getItem('style')
 const style = JSON.parse(storage)
-const bgTea = document.getElementById('bg-tea')
-const newTea = theme.tea[style.tea]
-bgTea.style.borderTop = ''
-bgTea.style.borderTopColor = newTea
+if (style) {
+  const bgTea = document.getElementById('bg-tea')
+  const newTea = theme.tea[style.tea]
+  bgTea.style.borderTop = ''
+  bgTea.style.borderTopColor = newTea
+}
