@@ -203,7 +203,7 @@ function update () {
   const bubbles = document.getElementsByClassName('bubble')
   gameTime += animationSpeed
   if (!decorativeMode) {
-    if (style.tea != null) {
+    if (localStorage.getItem('style') != null) {
       Decorative.style.borderTop = ((playHeight) * (1 - (gameTime / gameLength))) + 'px solid ' + theme.tea[style.tea]
     }
     Decorative.style.top = playHeight - ((playHeight) * (1 - (gameTime / gameLength))) + (playHeight / 2.5) + 'px'
