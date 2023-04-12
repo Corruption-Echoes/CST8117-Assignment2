@@ -15,6 +15,9 @@
 #cup{
     z-index: 1;
 }
+
+
+
 .bubble{
     z-index: 4;
     position: absolute;
@@ -52,14 +55,16 @@
 
 #score-miniBoard{
     position: absolute;
-    width: 300px;
+    width: 250px;
     height: 150px;
-    background-color: #DBD3BE;
-    border: 5px solid #DEB620;
+    background-color:bisque;
+    border: 15px solid #DEB620;
     margin: 15px;
     font-size: 25px;
+    font-weight: bold;
     text-align: center;
     z-index: 2;
+    border-radius: 3%;
 }
 
 .game {
@@ -72,6 +77,14 @@
     height: auto;
     width: 600px;
     z-index: -10;
+}
+
+.bg-cup-bottom {
+    position: absolute;
+    height: auto;
+    top: 880px;;
+    width: 600px;
+    z-index: 10;
 }
 
 #bg-tea {
@@ -150,20 +163,17 @@ img{
 #menuImage {
    display: table-column;
    position: absolute;
-   width: 530px;
-   margin: 370px 5px 5px 5px;
+   width: 40%;
+   margin: 320px 5px 5px 5px;
    justify-content: center;
 }
 
-.flavour{
-    width: 500px;
-    height: 500px;
+.menuType{
+ display: flex;
+ text-align: center;
+ padding: 0px 50px;
 }
 
-.bubbleType{
-    width: 500px;
-    height: 500px;
-}
 
 #scorePic{
     width: 700px;
@@ -173,16 +183,26 @@ img{
 
 .flavour-title{
     color: #fdeca6;
+    text-align: center;
     justify-content: center;
-    height: 80px;
-    width: 600px ;
-    margin: 3px, 3px, 3px, 3px;
+    margin: 10px;
+    padding-bottom: 0%;
+}
+
+.flavour-t2{
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
+.ul{
+    margin: 10px;
 }
 
 .menuOptions{
     display: flex;
     flex-direction: row;
     height: 300px;
+    margin-top: 5px;
 }
 
 #customize-cup {
@@ -256,6 +276,7 @@ img{
 
 .custRight{
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-size: 30px;
     color: white;
@@ -271,6 +292,7 @@ img{
     border: 1px solid;
     width: 30%;
     height: 300px;
+    mar
 }
  /*
 .bubble{
