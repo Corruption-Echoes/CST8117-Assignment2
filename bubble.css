@@ -15,7 +15,9 @@
 #cup{
     z-index: 1;
 }
-
+.decorativeBubbles{
+color:#90C5C9;
+}
 
 
 .bubble{
@@ -337,7 +339,8 @@ img{
     display: flex;
 }
 .scoreImg{
-    width: 17%;
+    width: 15%;
+    aspect-ratio: auto;
 }
 
 table td{
