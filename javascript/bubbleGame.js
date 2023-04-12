@@ -58,15 +58,20 @@ function createBubble (mode) {
   image.style.width = bubbleWidth * bubbleScale + 'px'
   image.style.height = bubbleHeight * bubbleScale + 'px'
   construct.className = 'bubble'
-  if (mode === 'normal') {
+  if (!decorativeMode) {
+    if (mode === 'normal') {
+      construct.onclick = addPoints
+      image.src = 'images/Bubble.png'
+    } else if (mode === 'break') {
+      image.src = 'images/redBubble.png'
+      construct.onclick = removeStreak
+    } else if (mode === 'gold') {
+      image.src = 'images/goldBubble.png'
+      construct.onclick = addGoldPoints
+    }
+  } else {
+    image.src = 'images/teal.png'
     construct.onclick = addPoints
-    image.src = 'images/Bubble.png'
-  } else if (mode === 'break') {
-    image.src = 'images/redBubble.png'
-    construct.onclick = removeStreak
-  } else if (mode === 'gold') {
-    image.src = 'images/goldBubble.png'
-    construct.onclick = addGoldPoints
   }
   bubbleContainer.appendChild(construct)
 }
