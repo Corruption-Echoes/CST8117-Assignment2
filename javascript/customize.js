@@ -4,7 +4,12 @@ const currentStyle = JSON.parse(storage)
 const currentTea = currentStyle.tea
 const tea = document.getElementById('tea')
 
-tea.className = currentTea
+// initialize
+if (currentTea !== '') {
+  tea.classList.add(currentTea)
+} else {
+  tea.classList.add('green-tea')
+}
 
 const greenTea = document.getElementById('green-tea')
 greenTea.addEventListener('click', e => {
