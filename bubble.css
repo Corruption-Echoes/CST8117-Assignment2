@@ -331,6 +331,7 @@ img{
 }
 .scoreImg{
     width: 17%;
+    aspect-ratio: auto;
 }
 
 table td{
