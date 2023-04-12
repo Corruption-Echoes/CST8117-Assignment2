@@ -81,8 +81,8 @@
 
 .bg-cup-bottom {
     position: absolute;
+    top: 880px;
     height: auto;
-    top: 880px;;
     width: 600px;
     z-index: 10;
 }
@@ -208,8 +208,17 @@ img{
 #customize-cup {
     position: absolute;
     top: 270px;
+    height: auto;
     width: 350px;
     z-index: -5;
+}
+
+#customize-cup-bottom {
+    position: absolute;
+    bottom: -8px;
+    height: auto;
+    width: 350px;
+    z-index: 5;
 }
 
 .green-tea {

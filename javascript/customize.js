@@ -1,5 +1,10 @@
 const style = { tea: '', bubble: '' }
+const storage = localStorage.getItem('style')
+const currentStyle = JSON.parse(storage)
+const currentTea = currentStyle.tea
 const tea = document.getElementById('tea')
+
+tea.className = currentTea
 
 const greenTea = document.getElementById('green-tea')
 greenTea.addEventListener('click', e => {
