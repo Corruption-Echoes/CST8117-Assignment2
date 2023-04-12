@@ -8,19 +8,22 @@
     left:-25%;
     width:150%;
     background-color: bisque;
-    z-index: 0.5;
+    z-index: 2;
     transform:rotateX(3.142rad);
     transform-origin:top;
 }
 #cup{
-    z-index: 0.8;
+    z-index: 1;
 }
 .bubble{
-    z-index: 1;
+    z-index: 4;
     position: absolute;
     bottom: 0px;
     border-radius: 250px;
     font-size: xx-large;
+}
+.bubbleSink{
+    z-index: 3 !important;
 }
 .pointGiver{
     color: lightgray;
@@ -79,10 +82,11 @@
     height: 0;
     width: 220px;
     position: absolute;
+    z-index: 2;
 }
 
 .game-block {
-    z-index: 1;
+    z-index: 3;
     display: flex;
 
 }

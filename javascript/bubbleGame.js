@@ -1,6 +1,12 @@
 // Gets the neccesary field variables
-const bubbleContainer = document.getElementById('BubbleContainer')
+let bubbleContainer = document.getElementById('BubbleContainer')
+
 const Decorative = document.getElementById('bg-tea')
+let decorativeMode = false
+if (Decorative == null) {
+  decorativeMode = true
+  bubbleContainer = document.getElementById('body')
+}
 // Decorative.style.backgroundColor = 'red'
 const playWidth = bubbleContainer.getBoundingClientRect().width
 const playHeight = bubbleContainer.getBoundingClientRect().height
@@ -30,8 +36,12 @@ const bubbleWeight = 0.6
 const breakWeight = 0.3
 const goldWeight = 0.1
 // Controls the scoring system
-const scoreBoardTemplate = document.getElementById('scoreboard').textContent
-const streakBoardTemplate = document.getElementById('streakboard').textContent
+let streakBoardTemplate
+let scoreBoardTemplate
+if (!decorativeMode) {
+  scoreBoardTemplate = document.getElementById('scoreboard').textContent
+  streakBoardTemplate = document.getElementById('streakboard').textContent
+}
 let score = 0
 let streak = 0
 const scorePer = 100
@@ -61,8 +71,10 @@ function createBubble (mode) {
   bubbleContainer.appendChild(construct)
 }
 function updateBoards () {
-  document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
-  document.getElementById('streakboard').textContent = streakBoardTemplate + streak
+  if (!decorativeMode) {
+    document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
+    document.getElementById('streakboard').textContent = streakBoardTemplate + streak
+  }
 }
 function addGoldPoints () {
   streak++
@@ -103,7 +115,8 @@ function bubbleAnimate (bubble) {
     // console.log(x)
     if (Math.random() > 0.7) {
       if (x.includes('ubble.')) {
-        bubble.style.zIndex = bubble.style.zIndex - 0.1
+        bubble.style.zIndex = '2'
+        // console.log(bubble)
         bubble.firstChild.src = 'images/pop1.png'
       } else if (x.includes('p1')) {
         bubble.firstChild.src = 'images/pop2.png'
@@ -129,15 +142,15 @@ function overflowPrevention (bubble) {
   // Make sure bubbles stay in their container properly!
   if (!overflowModeWrap) {
     if (parseInt(bubble.style.left) < 0) {
-      bubble.style.left = 0
-    } else if (parseInt(bubble.style.left) + halfWidth > playWidth) {
-      bubble.style.left = playWidth
+      bubble.style.left = 0 + 'px'
+    } else if (parseInt(bubble.style.left) > playWidth - bubbleWidth * 2.5) {
+      bubble.style.left = playWidth - bubbleWidth * 2.5 + 'px'
     }
   } else {
     if (parseInt(bubble.style.left) < 0) {
-      bubble.style.left = playWidth - bubbleWidth + 'px'
-    } else if (parseInt(bubble.style.left) + halfWidth > playWidth) {
-      bubble.style.left = bubbleWidth + 'px'
+      bubble.style.left = playWidth - bubbleWidth * 2.5 + 'px'
+    } else if (parseInt(bubble.style.left) > playWidth - bubbleWidth * 2.5) {
+      bubble.style.left = 0 + 'px'
     }
   }
 }
@@ -184,12 +197,13 @@ function deleteBubble (bubble) {
 function update () {
   const bubbles = document.getElementsByClassName('bubble')
   gameTime += animationSpeed
-  Decorative.style.borderTop = ((playHeight) * (1 - (gameTime / gameLength))) + 'px solid ' + theme.tea[style.tea]
-  Decorative.style.top = playHeight - ((playHeight) * (1 - (gameTime / gameLength))) + (playHeight / 2.5) + 'px'
-  Decorative.style.borderRight = 'solid transparent ' + 50 * (1 - (gameTime / gameLength)) + 'px'
-  Decorative.style.borderLeft = 'solid transparent ' + 50 * (1 - (gameTime / gameLength)) + 'px'
-  // console.log(gameTime)
-  if (gameTime > gameLength) {
+  if (!decorativeMode) {
+    Decorative.style.borderTop = ((playHeight) * (1 - (gameTime / gameLength))) + 'px solid ' + theme.tea[style.tea]
+    Decorative.style.top = playHeight - ((playHeight) * (1 - (gameTime / gameLength))) + (playHeight / 2.5) + 'px'
+    Decorative.style.borderRight = 'solid transparent ' + 50 * (1 - (gameTime / gameLength)) + 'px'
+    Decorative.style.borderLeft = 'solid transparent ' + 50 * (1 - (gameTime / gameLength)) + 'px'
+  }// console.log(gameTime)
+  if (gameTime > gameLength && !decorativeMode) {
     clearInterval(intervalID)
     intervalID = setInterval(wipeBubble, animationSpeed * 3)
     registerHighscore(score, replay)
@@ -205,6 +219,8 @@ function replay () {
 
 }
 // Initialize the boards and start the loop
-document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
-document.getElementById('streakboard').textContent = streakBoardTemplate + '0'
+if (!decorativeMode) {
+  document.getElementById('scoreboard').textContent = scoreBoardTemplate + score
+  document.getElementById('streakboard').textContent = streakBoardTemplate + '0'
+}
 intervalID = setInterval(update, animationSpeed)
