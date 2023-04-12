@@ -166,8 +166,8 @@ function pickSpawner () {
 }
 // Handles bubble automated spawning
 function bubbleSpawnCheck (bubbles) {
-  if (bubbles.length < maximumBubbles) {
-    if (Math.random() * dynamicFlowRate > 1 - bubbleSpawnPercentage) {
+  if (bubbles.length < maximumBubbles || (bubbles.length < maximumBubbles * 2 && decorativeMode)) {
+    if (Math.random() * dynamicFlowRate > 1 - bubbleSpawnPercentage || (Math.random() * dynamicFlowRate / 2 > 1 - bubbleSpawnPercentage)) {
       const type = Math.random()
       if (type < bubbleWeight) {
         createBubble('normal')
