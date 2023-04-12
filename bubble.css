@@ -76,6 +76,14 @@
     z-index: -10;
 }
 
+.bg-cup-bottom {
+    position: absolute;
+    height: auto;
+    top: 880px;;
+    width: 600px;
+    z-index: 10;
+}
+
 #bg-tea {
     margin-top: 250px;
     border-top: 480px solid #B1CBA666;
