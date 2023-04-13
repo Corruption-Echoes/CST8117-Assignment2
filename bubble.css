@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
+body{
+    background-color: white;
+    font-family: 'Indie Flower', cursive;
+    background-color: #F8F8F8;
+}
+
+h1{
+    text-align: center;
+    font-size: 80px;
+    color: #D97969;
+    font-weight: bold;
+    margin: 0;
+}
+
+ /*
+img{
+    width: 120%;
+}
+ */
+
 footer {
     display: grid;
     grid-template-columns: auto auto auto auto ;
@@ -15,8 +35,8 @@ footer {
     align-content: center;
 }
 
-
 /* GamePage */
+
 .decorative{
     position: absolute;
     bottom:-100%;
@@ -30,10 +50,10 @@ footer {
 #cup{
     z-index: 1;
 }
+
 .decorativeBubbles{
 color:#90C5C9;
 }
-
 
 .bubble{
     z-index: 4;
@@ -42,20 +62,25 @@ color:#90C5C9;
     border-radius: 250px;
     font-size: xx-large;
 }
+
 .bubbleSink{
     z-index: 3 !important;
 }
+
 .pointGiver{
     color: lightgray;
 }
+
 .streakBreaker{
     color: red;
     /* background-color: salmon; */
 }
+
 .golden{
     color:gold;
     /*background-color: khaki;*/
 }
+
 #BubbleContainer{
     position: relative;
     margin-top: 225px;
@@ -119,27 +144,7 @@ color:#90C5C9;
 .game-block {
     z-index: 3;
     display: flex;
-
 }
-
-body{
-    background-color: white;
-    font-family: 'Indie Flower', cursive;
-    background-color: #F8F8F8;
-}
-
-h1{
-    text-align: center;
-    font-size: 80px;
-    color: #D97969;
-    font-weight: bold;
-    margin: 0;
-}
-
-img{
-    width: 120%;
-}
-
 
 /* Main All */
 
@@ -176,7 +181,6 @@ img{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
 }
 
 #menuImage {
@@ -192,7 +196,6 @@ img{
  text-align: center;
  padding: 0px 50px;
 }
-
 
 #scorePic{
     width: 700px;
@@ -213,6 +216,7 @@ img{
     justify-content: center;
     margin: 10px;
 }
+
 .ul{
     margin: 10px;
 }
@@ -248,6 +252,7 @@ img{
     height: 0;
     width: 130px;
 }
+
 .chai {
     margin-bottom: 110px;
     border-top: 270px solid #B2833066;
@@ -256,6 +261,7 @@ img{
     height: 0;
     width: 130px;
 }
+
 .coconut {
     margin-bottom: 110px;
     border-top: 270px solid #E9EDF666;
@@ -264,6 +270,7 @@ img{
     height: 0;
     width: 130px;
 }
+
 .taro {
     margin-bottom: 110px;
     border-top: 270px solid #A3A6E866;
@@ -272,6 +279,7 @@ img{
     height: 0;
     width: 130px;
 }
+
 .watermelon {
     margin-bottom: 110px;
     border-top: 270px solid #D23B6866;
@@ -315,14 +323,13 @@ img{
     border: 20px solid #DEB620;
 }
 
-
-
 .flavour{
     border: 1px solid;
     width: 30%;
     height: 300px;
     mar
 }
+
  /*
 .bubble{
     border: 1px solid;
@@ -332,6 +339,7 @@ img{
 */
 
 /* Score page */
+
 .middle{
     display: flex;
     flex-direction: column;
@@ -345,8 +353,7 @@ img{
 }
 
 #personalContainer{
-    width: 60%
-   
+    width: 60%  
 }
 
 #highscoreContainer{
@@ -356,6 +363,7 @@ img{
 .flexIMG{
     display: flex;
 }
+
 .scoreImg{
     width: 15%;
     aspect-ratio: auto;
@@ -382,7 +390,6 @@ th{
 }
 
 /*LOG IN CSS*/
-
 
 main {
     display: flex;
