@@ -383,6 +383,13 @@ th{
 
 /*LOG IN CSS*/
 
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
 @media only screen and (max-width: 768px) {
     main{
         display: flex;
@@ -390,12 +397,6 @@ th{
         align-items: center;
     }
  
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .mainImage {
