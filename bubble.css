@@ -182,8 +182,8 @@ img{
 #menuImage {
    display: table-column;
    position: absolute;
-   width: 40%;
-   margin: 320px 5px 5px 5px;
+   width: 30%;
+   margin: 38vh 5px 5px 5px;
    justify-content: center;
 }
 
