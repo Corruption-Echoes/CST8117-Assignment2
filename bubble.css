@@ -383,6 +383,15 @@ th{
 
 /*LOG IN CSS*/
 
+@media only screen and (max-width: 768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -423,7 +432,6 @@ form {
 }
 
 .form-line {
-  width: 30vw;
   grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
@@ -463,6 +471,12 @@ form {
   font-size: larger;
   font-weight: bold;
   text-align: center;
+  box-shadow: 0 5px gray;
+  transform: translateY(4px);
+}
+
+.login-btn:hover {
+    background-color: #DEB620
 }
 
 .new-user-msg {
@@ -482,4 +496,10 @@ form {
   text-align: center;
   font-family: 'Indie Flower', cursive;
   font-weight: bold;
+  box-shadow: 0 5px gray;
+  transform: translateY(4px);
+}
+
+.register-btn:hover {
+    background-color: #DEB620
 }
