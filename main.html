@@ -16,10 +16,11 @@
 </head>
 
 <body id="body">
+    <header>
+        <h1> Let's Get Popping ! </h1>
+    </header>
 
-    <h1> Let's Get Popping ! </h1>
-
-    <main>
+    <main class="main-form">
         <img class="mainImage" src="images/reg&log.png" alt="main">
         <form>
             <div class="error-msg"><p id="errorDisplay"></p></div>
@@ -27,24 +28,24 @@
                 <label>User Name:</label>
                 <input type="text" name="username" id="username">
             </div>
-            <div id="empty-username" class="alert-msg hide">Username cannot be empty!</div>
             <div class="form-line">
                 <label>Password:</label>
                 <input type="password" name="password" id="password">
             </div>
-            <div id="empty-password" class="alert-msg hide">Password cannot be empty!</div>
             <div class="forgot-password">
                 <a href="mailto:">Forgot Password?</a>
             </div>
-
             <input type="button" id="login-button" value="Log in" onclick="login()" class="login-btn">
-            <div class="new-user-msg">New to Bubble Popping? Sign up here!</div>
+            <div class="new-user-msg">
+                New to Bubble Popping? Sign up here!
+            </div>
             <input type="button" id="go-to-register" value="Sign Up" onclick="register()" class="login-btn">
         </form>
     </main>
     
     <footer>
-        <a href="https://www.privacypolicies.com/generic/" class="whiteText" target="_parent">Privacy Policy</a></footer>
+        <a href="https://www.privacypolicies.com/generic/" class="whiteText" target="_parent">Privacy Policy</a>
+    </footer>
 
     <script src="javascript/QueryDatabase.js"></script>
     <script src="javascript/login.js"></script>

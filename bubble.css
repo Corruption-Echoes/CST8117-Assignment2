@@ -384,7 +384,7 @@ th{
 
 /*LOG IN CSS*/
 
-main {
+.main-form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -588,7 +588,7 @@ form {
         margin-top: 80vw;
     }
 
-    main{
+    .main-form{
         display: flex;
         flex-direction: column;
         align-items: center;

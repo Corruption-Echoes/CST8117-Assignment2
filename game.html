@@ -10,38 +10,36 @@
 </head>
 
 <body>
-
-    <h1> Let's Get Popping ! </h1>
-
-    <div class="mainMenu">
-        <div class="mainMenuItem"><a href="highscore.html"> Score </a> </div>
-        <div class="mainMenuItem"><a href="customizetea.html"> Customize Your Tea</a> </div>
-        <div class="mainMenuItem"><a onclick="logout()"> Log Out </a> </div>
-    </div>
-
-    <div class="outer-boxG">
-
-        <div id="score-miniBoard">
-            <p id="scoreboard">Score: </p><!--Scoreboard object initial textContents is used as template-->
-            <p id="streakboard">Streak: </p><!--Also template defining-->
+    <header>
+        <h1> Let's Get Popping ! </h1>
+        <div class="mainMenu">
+            <div class="mainMenuItem"><a href="highscore.html"> Score </a> </div>
+            <div class="mainMenuItem"><a href="customizetea.html"> Customize Your Tea</a> </div>
+            <div class="mainMenuItem"><a onclick="logout()"> Log Out </a> </div>
         </div>
-    </div>
+    </header>
 
-    <div class="game">
-        <div class="game-block" id="BubbleContainer">
-        </div><!--Bubble Game host object, ID matters. Add any classes you want-->
-        <img src="images/cup1.png" alt="cup1" class="bg-cup" id="cup">
-        <img src="images/cup-bottom.png" alt="cup-bottom" class="bg-cup-bottom">
-        <div id="bg-tea" class="green-tea"></div>
-    </div>
+    <main>
+        <div class="outer-boxG">
+            <div id="score-miniBoard">
+                <p id="scoreboard">Score: </p><!--Scoreboard object initial textContents is used as template-->
+                <p id="streakboard">Streak: </p><!--Also template defining-->
+            </div>
+        </div>
+        <div class="game">
+            <div class="game-block" id="BubbleContainer"></div><!--Bubble Game host object, ID matters. Add any classes you want-->
+            <img src="images/cup1.png" alt="cup1" class="bg-cup" id="cup">
+            <img src="images/cup-bottom.png" alt="cup-bottom" class="bg-cup-bottom">
+            <div id="bg-tea" class="green-tea"></div>
+        </div>
+    </main>
 
-  <footer>
-    <a href="https://www.privacypolicies.com/generic/" class="whiteText" target="_parent">Privacy Policy</a></footer>
+    <footer>
+        <a href="https://www.privacypolicies.com/generic/" class="whiteText" target="_parent">Privacy Policy</a>
+    </footer>
 
     <script src="javascript/save.js"></script>
     <script src="javascript/QueryDatabase.js"></script>
     <script src="javascript/bubbleGame.js"></script>
-    
-
 </body>
 </html>

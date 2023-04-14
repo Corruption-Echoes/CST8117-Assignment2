@@ -8,26 +8,30 @@
     <link rel="stylesheet" href="bubble.css">
 </head>
 <body>
+    <header>
+        <h1> Let's Get Popping ! </h1>
+        <div class="mainMenu">
+            <div class="mainMenuItem"><a href="game.html">Back To Game</a> </div>
+            <div class="mainMenuItem"><a href="customizetea.html"> Customize Your Tea</a> </div>
+            <div class="mainMenuItem"><a href="main.html">Log Out</a> </div>
+        </div>
+    </header>
 
-    <h1> Let's Get Popping ! </h1>
-
-    <div class="mainMenu">
-        <div class="mainMenuItem"><a href="game.html">Back To Game</a> </div>
-        <div class="mainMenuItem"><a href="customizetea.html"> Customize Your Tea</a> </div>
-        <div class="mainMenuItem"><a href="main.html">Log Out</a> </div>
-    </div>
-    <div class="flexIMG">
-    <img src="images/score_img1.jpg" class="scoreImg">
-    <div class="middle">
-    <div id="personalContainer">
-    </div><!-- Personal best will be loaded into here-->
-    <div id="highscoreContainer"></div><!-- Highscore rows will be loaded into here-->
-    </div>
-    <img src="images/score_img2.jpg"  class="scoreImg">
-    </div>   
+    <main>
+        <div class="flexIMG">
+            <img src="images/score_img1.jpg" class="scoreImg">
+            <div class="middle">
+                <div id="personalContainer"></div><!-- Personal best will be loaded into here-->
+                <div id="highscoreContainer"></div><!-- Highscore rows will be loaded into here-->   
+            </div>
+            <img src="images/score_img2.jpg"  class="scoreImg">
+        </div>   
+    </main>
    
     <footer>
-        <a href="https://www.privacypolicies.com/generic/" class="whiteText" target="_parent">Privacy Policy</a></footer>
+        <a href="https://www.privacypolicies.com/generic/" class="whiteText" target="_parent">Privacy Policy</a>
+    </footer>
+    
     <script src="javascript/QueryDatabase.js"></script>
     <script src="javascript/highscore.js"></script>
 </body>
