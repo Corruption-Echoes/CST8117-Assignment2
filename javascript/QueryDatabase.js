@@ -6,7 +6,7 @@ function attemptLogin (userName, password, returnFunction) {
 function attemptRegister (userName, password, email, phone, returnFunction) {
   sendQuery('R', userName + ':' + password + ':' + email + ':' + phone, returnFunction)
 }
-function registerHighscore ( score, returnFunction) {
+function registerHighscore (score, returnFunction) {
   sendQuery('H', userID + ':' + score, returnFunction)
 }
 function getHighscores (returnFunction) {
