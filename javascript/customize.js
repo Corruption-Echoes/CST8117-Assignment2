@@ -1,7 +1,6 @@
 const style = { tea: '', bubble: '' }
 const tea = document.getElementById('tea')
 const storage = localStorage.getItem('style')
-console.log(storage)
 if (storage) {
   const currentStyle = JSON.parse(storage)
   let currentTea = currentStyle.tea
